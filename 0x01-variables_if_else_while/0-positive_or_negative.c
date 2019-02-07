@@ -2,8 +2,11 @@
 #include <stdio.h>
 #include <time.h>
 
-/* Betty style doc for function main goes there */
-
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
@@ -18,6 +21,5 @@ int main(void)
 		else
 			printf("%d is zero \n", n);
 	}
-
 	return (0);
 }
