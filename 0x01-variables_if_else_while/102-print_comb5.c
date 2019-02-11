@@ -14,24 +14,26 @@ int main(void)
 	int conta, conta2;
 
 	for (conta = 0 ; conta <= 99 ; conta++)
-			for (conta2 = 0 ; conta2 <= 99 ; conta2++)
+	{
+		unidades = (conta % 10) + 48;
+		decenas = (conta / 10) + 48;
+		for (conta2 = conta + 1 ; conta2 <= 99 ; conta2++)
+		{
+			putchar (decenas);
+			putchar (unidades);
+			putchar (' ');
+			uni2 = (conta2 % 10) + 48;
+			dece2 = (conta2 / 10) + 48;
+			putchar (dece2);
+			putchar (uni2);
+			if (decenas != 57 || unidades != 56 || dece2 != 57 || uni2 != 57)
 			{
-				unidades = conta % 10;
-				decenas = conta / 10;
-				uni2 = conta2 % 10;
-				dece2 = conta2 / 10;
-				putchar (decenas);
-				putchar (unidades);
+				putchar (',');
 				putchar (' ');
-				putchar (dece2);
-				putchar (uni2);
-				if (decenas != 57 || unidades != 56 || dece2 != 57 || uni2 != 57)
-				{
-					putchar (',');
-					putchar (' ');
-				}
-				else
-					putchar ('\n');
 			}
+			else
+				putchar ('\n');
+		}
+	}
 	return (0);
 }
