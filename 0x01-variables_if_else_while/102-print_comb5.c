@@ -11,7 +11,6 @@ int main(void)
 	int decenas;
 	int uni2;
 	int dece2;
-	int contador;
 
 	for (decenas = 48 ; decenas <= 57 ; decenas++)
 		for (unidades = 48 ; unidades <= 57 ; unidades++)
