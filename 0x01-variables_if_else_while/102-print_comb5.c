@@ -24,11 +24,11 @@ int main(void)
 					putchar (dece2);
 					putchar (uni2);
 					if (decenas != 57 || unidades != 56 || dece2 != 57 || uni2 != 57)
-					{						
+					{
 						putchar (',');
 						putchar (' ');
 					}
-					else 
+					else
 						putchar ('\n');
 				}
 		}
