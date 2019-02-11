@@ -16,7 +16,7 @@ int main(void)
 		for (unidades = 48 ; unidades <= 57 ; unidades++)
 		{
 			for (dece2 = decenas ; dece2 <= 57 ; dece2++)
-				for (uni2 = unidades + 1 ; uni2 <= 57 ; uni2++)
+				for (uni2 = unidades ; uni2 <= 57 ; uni2++)
 				{
 					putchar (decenas);
 					putchar (unidades);
