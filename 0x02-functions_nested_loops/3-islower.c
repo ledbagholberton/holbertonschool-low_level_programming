@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * _islower - return 1 if c is lowercase
+ *
+ * @c: This variable brings the character
+ * Return: Return 1 if lowercase; return 0 in other cases
+ */
 int _islower(int c)
 
 {
