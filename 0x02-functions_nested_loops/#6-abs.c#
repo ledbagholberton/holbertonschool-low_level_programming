@@ -1,0 +1,12 @@
+0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c0;136;0c
+0;136;0c
+
+0;136;0c#include "holberton.h"
+
+int _abs(int numero)
+{
+	if (numero<0)
+		return (numero*-1);
+	else
+		return (numero);
+}
