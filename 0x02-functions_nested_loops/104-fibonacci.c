@@ -8,18 +8,28 @@
 int main(void)
 {
 	int cont;
-	unsigned long a, b, suma;
+	int a1, a2, b1, b2, c , suma1, suma2;
 
-	a = 1;
-	b = 2;
-	printf("%ld, %ld, ", a, b);
-	for (cont = 0; cont <= 96; cont++)
+	a1 = 0;
+	a2 = 1;
+	b1 = 0;
+	b2 = 2;
+	c = 0;
+
+	printf("%d, %d, ",a2 ,b2 );
+	for (cont = 0; cont <= 93; cont++)
 	{
-		suma = a + b;
-		a = b;
-		b = suma;
-		printf("%d %ld, ", cont + 2, suma);
+		suma1 = a1 + b1;
+		if (suma1 > 10000001)
+			c = (suma1 / 1000000); 
+		suma1 = suma1 - c;
+		suma2 = a2 + b2 + c;
+		a1 = b1;
+		a2 = b2;
+		b1 = suma1;
+		b2 = suma2;
+		printf("%d:%d, ", suma1, suma2);
 	}
-	printf("%ld\n", a + b);
+/*	printf("%ld\n", a + b); */
 	return (0);
 }
