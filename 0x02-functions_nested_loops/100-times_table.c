@@ -23,27 +23,18 @@ void print_times_table(int n)
 			unidades = ((resultado % 100) % 10);
 			if (b != 0)
 			{
-				if (centenas != 0)
+				if (centenas == 0)
 				{
+					centenas = -16;
+					if (decenas == 0)
+						decenas = -16;
+				}
 				_putchar(centenas + '0');
 				_putchar(decenas + '0');
 				_putchar(unidades + '0');
-				}
-				else if (decenas != 0)
-					{
-					_putchar(' ');
-					_putchar(decenas + '0');
-					_putchar(unidades + '0');
-					}
-				else
-					{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(unidades + '0');
-					}
 			}
-			else 
-				_putchar ('0');
+			else
+				_putchar('0');
 			if (b != n)
 			{
 				_putchar(',');
