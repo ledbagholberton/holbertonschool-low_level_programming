@@ -8,7 +8,7 @@
 int main(void)
 {
 	int cont;
-	long  a1, a2, b1, b2, c, suma1, suma2;
+	long  max, a1, a2, b1, b2, c, suma1, suma2;
 
 	a1 = 0;
 	a2 = 1;
@@ -17,15 +17,16 @@ int main(void)
 	c = 0;
 	suma1 = 0;
 	suma2 = 0;
+	max = 1000000000000000000;
 
 	printf("%ld, %ld, ", a2, b2);
 	for (cont = 0; cont <= 95; cont++)
 	{
 		c = 0;
 		suma2 = a2 + b2;
-		if (suma2 >= 1000000000)
+		if (suma2 >= max)
 			c = 1;
-		suma2 = suma2 - (c * 1000000000);
+		suma2 = suma2 - (c * max);
 		suma1 = a1 + b1 + c;
 		a1 = b1;
 		a2 = b2;
