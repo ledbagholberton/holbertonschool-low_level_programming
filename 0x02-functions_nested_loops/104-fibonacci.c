@@ -19,7 +19,7 @@ int main(void)
 	suma2 = 0;
 
 	printf("%ld, %ld, ", a2, b2);
-	for (cont = 0; cont <= 96; cont++)
+	for (cont = 0; cont <= 95; cont++)
 	{
 		c = 0;
 		suma2 = a2 + b2;
@@ -35,7 +35,7 @@ int main(void)
 			printf("%ld, ", suma2);
 		else
 		{
-			if (cont != 96)
+			if (cont != 95)
 				printf("%ld%ld, ", suma1, suma2);
 			else
 				printf("%ld%ld\n", suma1, suma2);
