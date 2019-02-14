@@ -10,7 +10,7 @@ void print_triangle(int size)
 {
 	int aux, cont1, cont2, cont3;
 
-	if (size != 0)
+	if (size > 0)
 	{
 		for (cont1 = 1; cont1 <= size; cont1++)
 		{
