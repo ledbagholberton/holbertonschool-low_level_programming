@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+void print_most_numbers(void)
+{
+	int cont, a;
+
+	for (cont = 48; cont <= 57 ; cont++)
+	{
+		cont != 50 && cont != 52 ? _putchar(cont) : a++;
+	}
+	_putchar('\n');
+}
