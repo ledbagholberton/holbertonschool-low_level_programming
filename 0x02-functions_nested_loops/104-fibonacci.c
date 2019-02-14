@@ -23,9 +23,9 @@ int main(void)
 	{
 		c = 0;
 		suma2 = a2 + b2;
-		if (suma2 > 99999999999)
+		if (suma2 > 999999999999)
 			c = 1;
-		suma2 = suma2 - (c * 100000000000);
+		suma2 = suma2 - (c * 1000000000000);
 		suma1 = a1 + b1 + c;
 		a1 = b1;
 		a2 = b2;
