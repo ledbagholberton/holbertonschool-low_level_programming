@@ -7,8 +7,6 @@
  * @n: number to show
  * Return: No return
  */
-
-
 void print_number(int n)
 {
 	int d, c, div, num, signo, tam, a, b, num2;
@@ -25,22 +23,17 @@ void print_number(int n)
 			signo = 1;
 			num2 = -1 * num2;
 		}
-
-/* saca el tamnaño del numero */
-		a = num/10;
+		a = num / 10;
 		while (a != 0)
 		{
 			a = num / (tam * 10);
 			tam = tam * 10;
 			c++;
 		}
-
-/* va sacando numero por numero y lo imprime */
-
 		if (signo == 1)
 			_putchar(45);
-		c = c-1;
-		for (b = c-1; b >= 0; b--)
+		c = c - 1;
+		for (b = c - 1; b >= 0; b--)
 		{
 			div = 1;
 			for (d = b; d > 0; d--)
