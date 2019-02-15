@@ -1,9 +1,13 @@
 #include <stdio.h>
 
+/**
+ * main - return last composite numbers of specific
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-
-	long new, cont2, cont, max, numero;
+	long new, cont, max, numero;
 
 	numero = 612852475143;
 	new = numero;
@@ -20,4 +24,5 @@ int main(void)
 		}
 	}
 	printf("%ld \n", max);
+	return (0);
 }
