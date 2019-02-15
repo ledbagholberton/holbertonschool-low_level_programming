@@ -19,7 +19,7 @@ void print_number(int n)
 	{
 		if (n < 0)
 		{
-			signo = 1;
+			signo = 45;
 			num2 = -1 * num2;
 		}
 		a = num / 10;
@@ -29,8 +29,8 @@ void print_number(int n)
 			tam = tam * 10;
 			c++;
 		}
-		if (signo == 1)
-			_putchar(45);
+		if (signo == 45)
+			_putchar(signo);
 		c = c - 1;
 		for (b = c - 1; b >= 0; b--)
 		{
@@ -46,4 +46,5 @@ void print_number(int n)
 	}
 		else
 			_putchar ('0');
+	_putchar(' ');
 }
