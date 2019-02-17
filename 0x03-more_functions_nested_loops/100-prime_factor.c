@@ -13,8 +13,8 @@ int main(void)
 	new = numero;
 	cont = 2;
 	while (cont <= new)
-	{	
-		if ( new % cont != 0)
+	{
+		if (new % cont != 0)
 			cont++;
 		else
 		{
@@ -23,6 +23,6 @@ int main(void)
 			cont = 2;
 		}
 	}
-	printf("%ld \n", max);
+	printf("%ld\n", max);
 	return (0);
 }

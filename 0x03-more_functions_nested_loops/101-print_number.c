@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_number - print the number
@@ -6,9 +7,27 @@
  * @n: number to show
  * Return: No return
  */
+
+unsigned potencia(unsigned a1, unsigned b1)
+{
+	unsigned x, y;
+
+	y = a1;
+	if (b1 > 0)
+	{
+		for (x = 1; x < b1; x++)
+			y = y * a1;
+	}
+	else
+		y = 1;
+	return (y);
+}
+
+
 void print_number(int n)
 {
-	int d, c, div, num, signo, tam, a, b, num2;
+	int b, c, signo, tam;
+	unsigned int num2, a, div, num; 
 
 	signo = 0;
 	tam = 1;
@@ -31,17 +50,12 @@ void print_number(int n)
 		}
 		if (signo == 45)
 			_putchar(signo);
-		c = c - 1;
-		for (b = c - 1; b >= 0; b--)
+		for (b = c - 2; b >= 0; --b)
 		{
-			div = 1;
-			for (d = b; d > 0; d--)
-			{
-				div = div * 10;
-			}
+			div = potencia(10, b);
 			num = (num2 / div);
 			_putchar(num + '0');
-			num2 = num2 - (num * div);
+			num2 = num2 % div;
 		}
 	}
 		else
