@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - return last composite numbers of specific
+ * main - return last composite numbers of specific number
  *
  * Return: Always 0.
  */
