@@ -16,12 +16,10 @@ void puts2(char *str)
 	{
 		strptr++;
 	}
-	do {
+	while (ini < strptr)
+	{
 		_putchar(*ini);
 		ini = ini + 2;
 	}
-	while (ini < strptr);
-	{
 	_putchar('\n');
-	}
 }
