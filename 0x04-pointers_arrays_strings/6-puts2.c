@@ -20,6 +20,8 @@ void puts2(char *str)
 		_putchar(*ini);
 		ini = ini + 2;
 	}
-	while (ini < strptr)
+	while (ini < strptr);
+	{
 	_putchar('\n');
+	}
 }
