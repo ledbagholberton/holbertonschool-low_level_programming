@@ -28,10 +28,10 @@ void puts_half(char *str)
 	j = ((i + 1) / 2);
 	}
 	ini = ini + j;
-	do {
+	while (ini < strptr)
+	{
 		_putchar(*ini);
 		ini++;
 	}
-	while (ini < strptr);
 	_putchar('\n');
 }
