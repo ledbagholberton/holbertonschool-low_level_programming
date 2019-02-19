@@ -32,6 +32,6 @@ void puts_half(char *str)
 		_putchar(*ini);
 		ini++;
 	}
-	while (ini < strptr);
+	while (ini < strptr)
 	_putchar('\n');
 }
