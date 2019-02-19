@@ -22,7 +22,7 @@ void rev_string(char *s)
 	}
 
 	fin--;
-	for (j = 0; j <= i / 2; j++)
+	for (j = 0; j <= i / 2 - 1; j++)
 	{
 		aux = *fin;
 		aux2 = *inicio;
