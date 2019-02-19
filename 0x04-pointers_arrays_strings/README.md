@@ -1,0 +1,1 @@
+Here you will find the code for several tasks related with pointers and arrays in C
