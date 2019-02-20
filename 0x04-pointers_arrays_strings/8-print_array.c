@@ -18,15 +18,12 @@ void print_array(int *a, int n)
 		{
 			n = 5;
 		}
-		else
-		{
-			for (i = 1; i < n ; i++)
+		for (i = 1; i < n ; i++)
 			{
 				printf("%d, ", *a);
 				a++;
 			}
 			printf("%d\n", *a);
-		}
 	}
 	else
 	printf("\n");
