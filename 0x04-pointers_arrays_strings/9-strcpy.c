@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strcpy - copy one string to another
  *
@@ -20,7 +19,6 @@ char *_strcpy(char *dest, char *src)
 		src1++;
 		n++;
 	}
-	printf("%d\n",n);
 	i = -1;
 	while (i < n)
 	{
