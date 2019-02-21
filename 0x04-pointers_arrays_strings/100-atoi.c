@@ -34,9 +34,9 @@ int _atoi(char *s)
 	for (cont = 1; ini != marca; cont++)
 	{
 		ini--;
-		for (potencia = 10, cont2 = cont - 1 ; cont2 > 0; cont2--) 
+		for (potencia = 10, cont2 = cont - 1 ; cont2 > 0; cont2--)
 			potencia = 10 * potencia;
 		numero = numero + *ini * potencia;
-	}		
+	}
 	return (numero);
 }
