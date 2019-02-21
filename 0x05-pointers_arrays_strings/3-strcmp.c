@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
- * reset_to_98 - change the value of n to 98
+ * _strcmp - compare two strings
  *
- * @n: Address of n
- * Return: n value changed to 98
+ * @s1: Address of string 1
+ * @s2: Address of string 2
+ * Return: int value with difference ASCII first char in string
  */
 
 int _strcmp(char *s1, char *s2)
 {
 	int a;
-	a = *s1 - *s2;  
-	return (a);
 
+	a = *s1 - *s2;
+	return (a);
 }
