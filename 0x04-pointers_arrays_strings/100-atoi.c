@@ -17,26 +17,27 @@ int _atoi(char *s)
 	ini = s;
 	aux = s;
 	signo = 1;
-	while (*ini <= 30 || *ini >= 39)
+	while (*ini < 48 || *ini > 57)
 		ini++;
 	marca = ini;
-	while (aux <= marca)
+	while (aux < marca)
 	{
 		if (*aux == '-')
 			signo = signo * -1;
 		aux++;
 	}
-	while (*ini >= 30 || *ini <= 39)
+	while (*ini >= 48 && *ini <= 57)
 	{
 		ini++;
 	}
-	numero = *ini;
+	ini--;
+	numero = *ini-48;
 	for (cont = 1; ini != marca; cont++)
 	{
-		ini--;
 		for (potencia = 10, cont2 = cont - 1 ; cont2 > 0; cont2--)
 			potencia = 10 * potencia;
-		numero = numero + *ini * potencia;
+		numero = numero + (*ini - 48) * potencia;
+		ini--;
 	}
 	return (numero);
 }
