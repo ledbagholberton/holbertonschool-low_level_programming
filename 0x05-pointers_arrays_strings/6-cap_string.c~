@@ -1,0 +1,24 @@
+#include "holberton.h"
+/**
+ * cap_string - capitalize all the words - exceptions
+ *
+ * @str: Address of string
+ * Return: Pointer string
+ */
+
+char *cap_string(char *str)
+{
+	char *aux;
+
+	aux = str;
+	while (*aux != '\0')
+	{
+		if (*(aux - 1) == 32 || *(aux - 1) == 9)
+		{
+			if (*aux >= 97 && *aux <= 122)
+				*aux = *aux - 32;
+		}
+		aux++;
+	}
+	return (str);
+}
