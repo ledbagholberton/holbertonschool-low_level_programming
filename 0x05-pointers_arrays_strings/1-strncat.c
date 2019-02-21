@@ -5,7 +5,7 @@
  *
  * @dest: Address of destiny string
  * @src: Address of source string
- * n: 
+ * @n: Number from comparison
  * Return: Pointer to destiny string
  */
 
