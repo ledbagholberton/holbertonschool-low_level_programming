@@ -11,6 +11,9 @@ char *cap_string(char *str)
 	char *aux;
 
 	aux = str;
+	if (*aux >= 97 && *aux <= 122)
+		*aux = *aux - 32;
+	aux++;
 	while (*aux != '\0')
 	{
 		if (*(aux - 1) == 32 || *(aux - 1) == 9 || *(aux - 1) == 10 ||
