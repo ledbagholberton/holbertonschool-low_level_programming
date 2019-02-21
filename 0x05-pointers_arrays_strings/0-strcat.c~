@@ -1,0 +1,30 @@
+include "holberton.h"
+/**
+ * _strcat - concatenate two strings
+ *
+ * @dest: Pointer of destiny string
+ * @src: Pointer of source string
+ * Return: Pointer to destiny string
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int cont;
+	char *fuente, *destino;
+
+	fuente = src;
+	destino = dest;
+
+	for (cont = 0; destino[cont] != '\0'; cont++)
+		continue;
+	destino = destino + cont;
+
+	while (*fuente != '\0')
+	{
+		*destino = *fuente;
+		destino++;
+		fuente++;
+	}
+	*destino = '\0';
+	return (dest);
+}
