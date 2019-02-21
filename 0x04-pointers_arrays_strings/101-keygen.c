@@ -17,7 +17,7 @@ int main(void)
 	num2 = rand() % 255;
 	num3 = rand() % 255;
 	num4 = rand() % 255;
-	printf("%c%c%c%c\n",num1,num2,num3,num4);
+	printf("%c%c%c%c\n", num1, num2, num3, num4);
 
 return (0);
 }
