@@ -1,0 +1,16 @@
+#include 
+/**
+ * rot13 - Rotting13 cipher
+ *
+ * @str: Address of string
+ * Return: Pointer string
+ */
+char *rot13(char *str);
+{
+	for (;*str =¡ '\0' ; *str++)
+	{
+		if (*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
+		*str = *str - 13;
+	}
+return(dest);
+}
