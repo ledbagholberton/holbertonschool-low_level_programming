@@ -11,14 +11,17 @@
 
 int _atoi(char *s)
 {
-	char *ini, *marca, *aux;
-	int cont, cont2, signo, numero, potencia;
+	char *ini, *marca, *aux, *answer, *aux2;
+	int signo;
 
 	ini = s;
 	aux = s;
 	signo = 1;
+	aux2 = answer;
 	while (*ini <= 30 || *ini >= 39)
+	{
 		ini++;
+	}
 	marca = ini;
 	while (aux <= marca)
 	{
@@ -26,17 +29,16 @@ int _atoi(char *s)
 			signo = signo * -1;
 		aux++;
 	}
+	if (signo < 0)
+	{
+		*answer = '-';
+		answer++;
+	}
 	while (*ini >= 30 || *ini <= 39)
 	{
+		*answer = *ini
 		ini++;
+		answer++;
 	}
-	numero = *ini;
-	for (cont = 1; ini != marca; cont++)
-	{
-		ini--;
-		for (potencia = 10, cont2 = cont - 1 ; cont2 > 0; cont2--) 
-			potencia = 10 * potencia;
-		numero = numero + *ini * potencia;
-	}		
-	return (numero);
+	printf("Numero: %s", aux2);
 }
