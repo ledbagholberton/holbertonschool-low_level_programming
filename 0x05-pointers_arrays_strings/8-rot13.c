@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * root13 - encodes in rot13
+ * rot13 - encodes in rot13
  *
  * @str: Address of string
  * Return: Return pointer to string
