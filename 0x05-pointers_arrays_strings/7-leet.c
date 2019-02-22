@@ -4,7 +4,7 @@
  *
  * @str: Address of string
  * Return: Return pointer to string
- */ 
+ */
 char *leet(char *str)
 {
 	char *aux;
@@ -14,7 +14,7 @@ char *leet(char *str)
 
 	cont = 0;
 	aux = str;
-	while(aux[cont] != '\0')
+	while (aux[cont] != '\0')
 	{
 		for (cont2 = 0; src[cont2] != '\0'; cont2++)
 		{
