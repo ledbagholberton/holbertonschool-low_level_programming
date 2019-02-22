@@ -22,10 +22,10 @@ void print_number(int n)
 		{
 			num_a = num_a / 10;
 			cont++;
-			divisor = divisor * 10;
 		}
 		cont = cont - 1;
-		divisor = divisor / 10;
+		for (a = 0; a < cont; a++)
+			divisor = divisor * 10;
 		for (a = 0; a <= cont; a++)
 		{
 			b = num_b / divisor;
