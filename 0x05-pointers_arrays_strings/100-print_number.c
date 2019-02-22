@@ -24,7 +24,7 @@ void print_number(int n)
 			cont++;
 			divisor = divisor * 10;
 		}
-		cont = cont-1;
+		cont = cont - 1;
 		divisor = divisor / 10;
 		for (a = 0; a <= cont; a++)
 		{
