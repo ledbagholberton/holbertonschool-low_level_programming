@@ -12,10 +12,9 @@ char *rot13(char *str)
 	char dest[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int flag, cont, cont2;
 
-	cont = 0;
 	flag = 0;
 	aux = str;
-	while (aux[cont] != '\0')
+	for (cont = 0 ; aux[cont] != '\0'; cont++)
 	{
 		for (cont2 = 0; src[cont2] != '\0' && flag == 0; cont2++)
 		{
@@ -25,7 +24,6 @@ char *rot13(char *str)
 				flag = 1;
 			}
 		}
-	cont++;
 	flag = 0;
 	}
 return (str);
