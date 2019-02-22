@@ -14,7 +14,7 @@ void print_number(int n)
 	num_b = n;
 	divisor = 1;
 	cont = 0;
-	if (n < 0) 
+	if (n < 0)
 		_putchar('-');
 	while (num_a > 0)
 	{
