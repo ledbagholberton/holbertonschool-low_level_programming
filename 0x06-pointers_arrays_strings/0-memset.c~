@@ -1,0 +1,21 @@
+#include "holberton.h"
+/**
+ * reverse_array - reverse an integer array
+ *
+ * @s: Pointer to memory to fullfill
+ * @b: Char to use in memory fullfillment
+ * @n: Size of memory to be fullfilled
+ * Return: Pointer to array
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *aux;
+	unsigned int cont;
+
+	aux = s;
+	for (cont = 0; cont <= n; cont++)
+	{
+		aux[cont] = b;
+	}
+	return (s);
+}
