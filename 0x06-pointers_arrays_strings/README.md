@@ -1,0 +1,1 @@
+Here you will find the C code for multiple tasks using pointers and multidimensional arrays- 
