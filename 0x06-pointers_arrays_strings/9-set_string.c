@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * set_string - Change the pointer to string s0 to s1
  *
@@ -9,5 +10,5 @@
 
 void set_string(char **s, char *to)
 {
-	to = s; 
+	*s = to;
 }
