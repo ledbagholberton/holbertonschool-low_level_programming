@@ -16,7 +16,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	aux1 = src;
 	aux2 = dest;
 
-	for (cont = 0; cont > n; cont--)
+	for (cont = n - 1; cont <= n; cont--)
 	{
 		aux2[cont] = aux1[cont];
 	}
