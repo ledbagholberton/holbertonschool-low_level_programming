@@ -12,7 +12,7 @@ int main(void)
 	char *s = "hola a todos";
 	char *f;
 
-	f = _strchr(s, ' ');
+	f = _strchr(s, '\0');
 	printf("%s\n", f);
 	return (0);
 }
