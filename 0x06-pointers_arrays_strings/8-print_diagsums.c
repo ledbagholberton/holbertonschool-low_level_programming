@@ -11,21 +11,21 @@
 
 void print_diagsums(int *a, int size)
 {
-	int aux, rows, columns, suma2;
+	int aux, rows, suma1;
 /*	int **p = &a; */
 
-	suma2 = 0;
-
-	for (rows = 0; rows <= size; rows++)
+	suma1 = 0;
+	for (rows = 0; rows <= ((size * size) + 1); rows = rows + size + 1)
 	{
-		aux = *(a + rows));
-		suma2 = suma2 + aux; 
-		printf("aux es %d, la suma2 es %d \n",aux ,suma2);
+		aux = *(a + rows);
+		suma1 = suma1 + aux;
 	}
-	for (rows = 0, columns = size; rows <= size; rows++, columns--)
+	printf("%d, ",suma1);
+	suma1 = 0;
+	for (rows = size - 1; rows <= ((size * size) - size + 1); rows = rows + size - 1)
 	{
-		aux = *(a + rows*(columns));
-		suma2 = suma2 + aux;
-		printf("aux es %d, la suma2 es %d \n",aux ,suma2);
+		aux = *(a + rows);
+		suma1 = suma1 + aux;
 	}
+	printf("%d\n",suma1);
 }

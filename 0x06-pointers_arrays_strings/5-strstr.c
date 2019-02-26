@@ -19,9 +19,9 @@ char *_strstr(char *haystack, char *needle)
 			{
 				flag++;
 			}
-			else
-				flag = 0;
 		}
+		if (flag = cont2)
+			return (
 	}
 	return (haystack + cont);
 }
