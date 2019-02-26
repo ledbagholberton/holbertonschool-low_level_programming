@@ -27,8 +27,7 @@ char *_strstr(char *haystack, char *needle)
 		if (flag == 1)
 			break;
 	}
-	if (flag == 0)
-		return ('\0');
-	else
-	return (haystack + cont);
+	if (flag == 1)
+		return (haystack + cont);
+	return ('\0');
 }
