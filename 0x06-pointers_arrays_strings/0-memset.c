@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * _memset - fills memory with the char b
  *
@@ -13,7 +14,7 @@ char *_memset(char *s, char b, unsigned int n)
 	unsigned int cont;
 
 	aux = s;
-	for (cont = 0; cont <= n; cont++)
+	for (cont = 0; cont < n; cont++)
 	{
 		aux[cont] = b;
 	}
