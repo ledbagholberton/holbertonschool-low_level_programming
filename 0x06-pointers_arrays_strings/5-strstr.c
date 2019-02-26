@@ -11,7 +11,9 @@ char *_strstr(char *haystack, char *needle)
 {
 	int cont, cont2, cont3, flag;
 
-	for (cont2 = 0; needle[cont2] != '\0'; cont2++);
+	for (cont2 = 0; needle[cont2] != '\0'; cont2++)
+	{
+	}
 	for (cont = 0; haystack[cont] != '\0'; cont++)
 	{
 		flag = 1;
