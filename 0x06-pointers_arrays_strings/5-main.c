@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char *s = "hello, wo wor worl world is fine";
+	char *s = "hello, world wor worl world is fine";
 	char *f = "world";
 	char *t;
 
