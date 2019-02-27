@@ -26,6 +26,11 @@ int _sqrt_recursion(int n)
 {
 	int x;
 
+	if (n == 0)
+		return (0);
+	else
+	{
 	x = 1;
 	return (doble(x, n));
+	}
 }
