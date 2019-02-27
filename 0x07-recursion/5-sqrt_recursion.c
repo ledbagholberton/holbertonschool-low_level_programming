@@ -2,7 +2,7 @@
 /**
  * doble - x tiemes x
  *
- * @x: Number to analize 
+ * @x: Number to analize
  * @n: Number to compare with doble
  * Return: x if equal to n / -1 if not SQR / recursive to explore x+1
  */
@@ -28,7 +28,7 @@ int _sqrt_recursion(int n)
 
 	if (n == 0)
 		return (0);
-	else
+	if (n != 0)
 	{
 	x = 1;
 	return (doble(x, n));
