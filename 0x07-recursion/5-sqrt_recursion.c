@@ -1,0 +1,23 @@
+#include "holberton.h"
+/**
+ * _sqrt_recursion - Square root
+ *
+ * @n: Number to take the square root 
+ * Return: Square root of n
+ */
+
+int doble(int x)
+{
+	return (x*x);
+}
+
+int _sqrt_recursion(int n)
+{
+	int x;
+
+	x = 1;
+	if (doble(x) != n)
+		doble (x+1);
+	else
+		return (x);
+}

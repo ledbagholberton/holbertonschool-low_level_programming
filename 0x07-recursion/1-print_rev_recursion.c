@@ -9,16 +9,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	char *aux;
-
-	aux = s;
-	aux++;
-	if (*aux = '\0')
-		aux++;
-	else
+	if (*s != '\0')
 	{
-	_print_rev_recursion(aux);
-	_putchar(*aux-1);
+	_print_rev_recursion(s + 1);
 	}
+	_putchar(*(s-1));
 }
-
