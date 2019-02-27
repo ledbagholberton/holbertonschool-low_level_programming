@@ -1,23 +1,31 @@
 #include "holberton.h"
 /**
- * _sqrt_recursion - Square root
+ * doble - x tiemes x
  *
- * @n: Number to take the square root 
- * Return: Square root of n
+ * @x: Number to analize 
+ * @n: Number to compare with doble
+ * Return: x if equal to n / -1 if not SQR / recursive to explore x+1
  */
 
-int doble(int x)
+int doble(int x, int n)
 {
-	return (x*x);
+	if (x * x == n)
+		return (x);
+	if (x * x > n)
+		return (-1);
+	return (doble(x + 1, n));
 }
+/**
+ * _sqrt_recursion - Square root
+ *
+ * @n: Number to take the square root
+ * Return: Square root of n
+ */
 
 int _sqrt_recursion(int n)
 {
 	int x;
 
 	x = 1;
-	if (doble(x) != n)
-		doble (x+1);
-	else
-		return (x);
+	return (doble(x, n));
 }
