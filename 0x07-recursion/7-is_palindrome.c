@@ -1,0 +1,33 @@
+#include "holberton.h"
+
+int contar(char *s, int conteo)
+{
+	if (*s != '\0')
+	{
+		conteo++;
+		contar(s, conteo);
+	}
+	return(conteo);
+}
+
+int comparar(char *s, int conteo)
+{
+	if (*s != *(s+conteo-1))
+		return (0);
+	else
+	{
+		comparar((s + 1), (conteo - 1));
+		return(1);
+	}
+}
+
+int is_palindrome(char *s)
+{
+	int b, conteo;
+
+	conteo = 0;
+	conteo = contar(s, conteo);
+	
+	b = comparar(s, conteo);
+	return(b);
+}
