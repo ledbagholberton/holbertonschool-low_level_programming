@@ -1,33 +1,57 @@
 #include "holberton.h"
 
+/**
+ * contar - cuenta longitud
+ *
+ * @s: Pointer to string
+ * @conteo: Contador
+ * Return: Integer with long
+ */
 int contar(char *s, int conteo)
 {
 	if (*s != '\0')
 	{
-		conteo++;
-		contar(s, conteo);
+		conteo = contar(s + 1, conteo);
 	}
-	return(conteo);
+	conteo++;
+	return (conteo);
 }
 
-int comparar(char *s, int conteo)
+/**
+ * comparar - compare string letter by letter
+ *
+ * @s: Pointer to string 1
+ * @m: Pointer to string 2
+ * Return: Integer 1 if equals / 0 if not equal
+ */
+int comparar(char *s, char *m)
 {
-	if (*s != *(s+conteo-1))
+	if (*s != *m)
 		return (0);
-	else
+	if (*s == *m)
 	{
-		comparar((s + 1), (conteo - 1));
-		return(1);
+		comparar((s + 1), (m - 1));
+		return (1);
 	}
+	return (1);
 }
 
+/**
+ * is_palindrome - xreview if the word is palindrome
+ *
+ * @s: Pointer to string
+ * Return: Integer 1 if equal / 0 if not equal
+ */
 int is_palindrome(char *s)
 {
-	int b, conteo;
+	int b, contador;
+	char *m;
 
-	conteo = 0;
-	conteo = contar(s, conteo);
-	
-	b = comparar(s, conteo);
-	return(b);
+	contador = 0;
+	contador = contar(s, contador);
+	contador--;
+	contador--;
+	m = s + contador;
+	b = comparar(s, m);
+	return (b);
 }
