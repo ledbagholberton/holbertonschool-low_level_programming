@@ -11,9 +11,14 @@ int _strlen_recursion(char *s)
 	int largo;
 
 	largo = 1;
-	if (*(s + 1) != '\0')
+	
+	if (*s != '\0')
 	{
 		largo = largo + _strlen_recursion(s + 1);
+	}
+	else
+	{
+		largo = 0;
 	}
 	return (largo);
 }
