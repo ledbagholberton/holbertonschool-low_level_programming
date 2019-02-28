@@ -12,7 +12,8 @@ void _print_rev_recursion(char *s)
 
 	aux = s;
 	if (*aux != '\0')
-		_print_rev_recursion(aux + 1);
-	aux--;
+	{
+	_print_rev_recursion(aux + 1);
 	_putchar(*aux);
+	}
 }
