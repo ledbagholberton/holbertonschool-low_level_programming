@@ -8,8 +8,11 @@
 
 void _print_rev_recursion(char *s)
 {
-	if (*s != '\0')
-		_print_rev_recursion(s + 1);
-	s--;
-	_putchar(*s);
+	char *aux;
+
+	aux = s;
+	if (*aux != '\0')
+		_print_rev_recursion(aux + 1);
+	aux--;
+	_putchar(*aux);
 }

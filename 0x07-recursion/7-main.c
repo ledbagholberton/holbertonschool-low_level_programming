@@ -9,8 +9,13 @@
 int main(void)
 {
 	int r;
-
+	r = is_palindrome("");
+        printf("%d\n", r);
+	r = is_palindrome("a");
+        printf("%d\n", r);
 	r = is_palindrome("level");
+        printf("%d\n", r);
+	r = is_palindrome("1  1");
 	printf("%d\n", r);
 	r = is_palindrome("redder");
 	printf("%d\n", r);
