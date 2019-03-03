@@ -27,10 +27,15 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 		}
+		if (atoi(argv[1] = 0)
+		{
+		printf("Error\n");
+		return (0);
+		}
 		else
 		{
 			total = atoi(argv[1]);
-			if (argc > 1 && total != 0 && *argv[1] != '0')
+			if (total != 0)
 				{
 					a25 = total / 25;
 					b25 = total % 25;
@@ -45,7 +50,7 @@ int main(int argc, char *argv[])
 					printf("%d\n", suma);
 					return (0);
 				}
-				else
+			else
 				{
 					printf("Error\n");
 					return (1);
