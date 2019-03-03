@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		{
 			if (cadena[cont2] < 48 || cadena[cont2] > 57)
 			{
-				printf ("Error\n");
+				printf("Error\n");
 				return (1);
 			}
 		}
