@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int a25, b25, a10, b10, a5, b5, a2, b2, a1, total, suma;
 
 	argc = argc;
-	if (argc > 2 || argc <= 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
