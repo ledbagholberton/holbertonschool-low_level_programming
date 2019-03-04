@@ -4,8 +4,8 @@
 /**
  * main - check the code for Holberton School students.
  *
- *@argc: Counts arguments in argv
- *@argv: Strings after exe
+ *@argc: Counts arguments in argv and have info about that
+ *@argv: Strings in args  
  * Return: Always 0.
  */
 
