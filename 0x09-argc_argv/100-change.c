@@ -5,8 +5,8 @@
  * main - check the code for Holberton School students.
  *
  *@argc: Counts arguments in argv and have info about that
- *@argv: Strings in args  
- * Return: Always 0.
+ *@argv: Strings in args
+ * Return: Number of coins.
  */
 
 int main(int argc, char *argv[])
