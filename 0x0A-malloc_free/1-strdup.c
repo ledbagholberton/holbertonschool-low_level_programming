@@ -18,6 +18,8 @@ char *_strdup(char *str)
 	{
 	}
 	newstr = malloc(cont * sizeof(char));
+	if (newstr == NULL)
+		return (NULL);
 	for (cont = 0; str[cont] != '\0'; cont++)
 	{
 		newstr[cont] = str[cont];
