@@ -1,28 +1,39 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
- * alloc_grid - double pointer to roprints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * alloc_grid - double pointer to grid
+ * @width: Widht of grid
+ * @height: Height of grid
  *
- * Return: Nothing.
+ * Return: Pointer double to grid.
  */
 
 
 int **alloc_grid(int width, int height)
 {
-	int size;
-	int *buffer
+	int size, i, j;
+	int **buffer;
+
 	size = width * height;
 	
 	if (size <= 0) 
 		return (NULL);
-	buffer = malloc(sizeof(int) * size);
-	for (cont = 0; cont < size; cont++)
-	{
-		buffer[cont] = 0;
-	}
 
+	buffer = malloc(sizeof(int) * height);
+	if (buffer == NULL)
+		return (NULL);
+	for (i = 0; i < height; i++)
+	{
+		buffer[i] = malloc(sizeof(int) * width);
+		if (buffer[i] == NULL)
+			return (NULL);
+	}
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+		{
+/*			printf("Posicion %d %d\n",i ,j);*/
+			buffer[i][j] = 0;
+		}
  	return (buffer);
 }
