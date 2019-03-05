@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
  * alloc_grid - double pointer to grid
  * @width: Widht of grid
@@ -16,8 +16,8 @@ int **alloc_grid(int width, int height)
 	int **buffer;
 
 	size = width * height;
-	
-	if (size <= 0) 
+
+	if (size <= 0)
 		return (NULL);
 
 	buffer = malloc(sizeof(int) * height);
@@ -32,8 +32,7 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 		for (j = 0; j < width; j++)
 		{
-/*			printf("Posicion %d %d\n",i ,j);*/
 			buffer[i][j] = 0;
 		}
- 	return (buffer);
+return (buffer);
 }
