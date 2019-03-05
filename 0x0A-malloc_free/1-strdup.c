@@ -1,5 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
  * _strdup - CLone astring in a memory space
  * @str: String to be duplicated
@@ -10,19 +12,20 @@
 char *_strdup(char *str)
 {
 	char *newstr;
-	int cont;
+	int cont, cont2;
 
 	if (!str)
 		return (NULL);
 	for (cont = 0; str[cont] != '\0'; cont++)
 	{
 	}
+	printf("LOngitud %d\n",cont);
 	newstr = malloc(cont * sizeof(char));
 	if (newstr == NULL)
 		return (NULL);
-	for (cont = 0; str[cont] != '\0'; cont++)
+	for (cont2 = 0; cont2 <= cont; cont2++)
 	{
-		newstr[cont] = str[cont];
+		newstr[cont2] = str[cont2];
 	}
 	return (newstr);
 }
