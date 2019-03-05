@@ -1,13 +1,20 @@
 #include "holberton.h"
 #include <stdlib.h>
+/**
+ * free_all - free memory space in case of failure
+ * @buffer: Space to free
+ * @height: Height of grid
+ *
+ * Return: Pointer double to grid.
+ */
 
 void free_all(int **buffer, int height)
 {
-        int i;
+	int i;
 
-        for (i=0; i < height; i++)
-                free (buffer[i]);
-        free(buffer);
+	for (i = 0; i < height; i++)
+		free(buffer[i]);
+	free(buffer);
 }
 
 /**
