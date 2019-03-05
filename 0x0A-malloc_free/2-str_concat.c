@@ -18,14 +18,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		buffer = malloc(1);
 		buffer[0] = '\0';
-		return(buffer);
+		return (buffer);
 	}
-	for (cont = 1; s1[cont] != '\0'; cont++);
-	for (cont2 = 1; s2[cont2] != '\0'; cont2++);
-	buffer = malloc(sizeof(char)*(cont + cont2));
+	for (cont = 1; s1[cont] != '\0'; cont++)
+	{
+	}
+	for (cont2 = 1; s2[cont2] != '\0'; cont2++)
+	{
+	}
+	buffer = malloc(sizeof(char) * (cont + cont2));
 	for (cont3 = 0; cont3 < cont; cont3++)
 		buffer[cont3] = s1[cont3];
-	for(; cont3 <= cont + cont2 + 2; cont3++)
+	for (; cont3 <= cont + cont2 + 2; cont3++)
 		buffer[cont3] = s2[cont3 - cont];
 	return (buffer);
 }

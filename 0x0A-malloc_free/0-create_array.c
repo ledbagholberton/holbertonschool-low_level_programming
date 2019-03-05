@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - Creates an array of chars initialized with the char c 
+ * create_array - Creates an array of chars initialized with the char c
  * @size : the size of array
  * @c: charc to fulfill in the buffer
  *
@@ -12,7 +12,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *buffer;
-	unsigned cont;
+	unsigned int cont;
 
 	if (size == 0)
 		return (NULL);
