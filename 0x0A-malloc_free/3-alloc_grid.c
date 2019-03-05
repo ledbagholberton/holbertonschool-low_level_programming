@@ -1,6 +1,15 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+void free_all(int **buffer, int height)
+{
+        int i;
+
+        for (i=0; i < height; i++)
+                free (buffer[i]);
+        free(buffer);
+}
+
 /**
  * alloc_grid - double pointer to grid
  * @width: Widht of grid
@@ -26,7 +35,7 @@ int **alloc_grid(int width, int height)
 		buffer[i] = malloc(sizeof(int) * width);
 		if (buffer[i] == NULL)
 		{
-			free(buffer);
+			free_all(buffer, height);
 			return (NULL);
 		}
 	}
