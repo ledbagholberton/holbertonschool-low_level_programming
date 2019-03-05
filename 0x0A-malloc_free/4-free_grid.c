@@ -3,7 +3,7 @@
 
 /**
  * free_grid - free memory space of a grid
- * @buffer: Space to free
+ * @grid: Space to free
  * @height: Height of grid
  *
  * Return: Pointer double to grid.
