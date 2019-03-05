@@ -31,5 +31,6 @@ char *str_concat(char *s1, char *s2)
 		buffer[cont3] = s1[cont3];
 	for (; cont3 <= cont + cont2 + 2; cont3++)
 		buffer[cont3] = s2[cont3 - cont];
+	buffer[cont3] = '\0';
 	return (buffer);
 }
