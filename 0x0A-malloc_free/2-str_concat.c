@@ -14,12 +14,10 @@ char *str_concat(char *s1, char *s2)
 	int cont, cont2, cont3;
 	char *buffer;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		buffer = malloc(1);
-		buffer[0] = '\0';
-		return (buffer);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (cont = 1; s1[cont] != '\0'; cont++)
 	{
 	}
