@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	for (cont = 0; str[cont] != '\0'; cont++)
 	{
 	}
-	printf("LOngitud %d\n",cont);
+/*	printf("LOngitud %d\n",cont);*/
 	newstr = malloc(cont * sizeof(char));
 	if (newstr == NULL)
 		return (NULL);
