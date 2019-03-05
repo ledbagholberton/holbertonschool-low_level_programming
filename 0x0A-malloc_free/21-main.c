@@ -7,10 +7,13 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int main(int argc, char *argv[])
 {
 	char *s;
-	s= str_concat("Betty ", "Holberton");
+
+	argc = argc;
+
+	s = str_concat(argv[2], argv[1]);
 	if (s == NULL)
 	{
 		printf("failed\n");

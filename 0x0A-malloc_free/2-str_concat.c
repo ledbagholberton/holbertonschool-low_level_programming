@@ -27,6 +27,8 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	buffer = malloc(sizeof(char) * (cont + cont2));
+	if (buffer == NULL)
+		return (NULL);
 	for (cont3 = 0; cont3 < cont; cont3++)
 		buffer[cont3] = s1[cont3];
 	for (; cont3 <= cont + cont2 + 2; cont3++)
