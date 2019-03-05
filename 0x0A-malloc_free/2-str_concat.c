@@ -18,10 +18,10 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (cont = 1; s1[cont] != '\0'; cont++)
+	for (cont = 0; s1[cont] != '\0'; cont++)
 	{
 	}
-	for (cont2 = 1; s2[cont2] != '\0'; cont2++)
+	for (cont2 = 0; s2[cont2] != '\0'; cont2++)
 	{
 	}
 	buffer = malloc(sizeof(char) * (cont + cont2));
