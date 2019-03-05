@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <limits.h>
 /**
  * str_concat - concatenate 2 strings
  * @s1: the string 1
@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	for (cont2 = 0; s2[cont2] != '\0'; cont2++)
 	{
 	}
-	buffer = malloc(sizeof(char) * (cont + cont2));
+	buffer = malloc(sizeof(char) * (cont + cont2 + 1));
 	if (buffer == NULL)
 		return (NULL);
 	for (cont3 = 0; cont3 < cont; cont3++)
