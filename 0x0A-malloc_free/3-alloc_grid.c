@@ -9,17 +9,14 @@
  * Return: Pointer double to grid.
  */
 
-
 int **alloc_grid(int width, int height)
 {
 	int size, i, j;
 	int **buffer;
 
 	size = width * height;
-
 	if (size <= 0)
 		return (NULL);
-
 	buffer = malloc(sizeof(int) * height);
 	if (buffer == NULL)
 		return (NULL);
@@ -30,9 +27,11 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 	}
 	for (i = 0; i < height; i++)
+	{
 		for (j = 0; j < width; j++)
 		{
 			buffer[i][j] = 0;
 		}
-return (buffer);
+	}
+	return (buffer);
 }
