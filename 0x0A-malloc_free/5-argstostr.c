@@ -1,10 +1,17 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
+/**
+ * argstostr - check the code for Holberton School students.
+ *
+ *@ac: count of arguments
+ *@av: pointer to arguments
+ * Return: Always 0.
+ */
+
 
 char *argstostr(int ac, char **av)
 {
-	int i,j,cont,size;
+	int i, j, cont, size;
 	char *buffer;
 
 	size = 0;
