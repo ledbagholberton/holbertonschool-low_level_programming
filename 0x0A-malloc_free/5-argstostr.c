@@ -27,8 +27,7 @@ char *argstostr(int ac, char **av)
 			size++;
 		}
 	}
-	printf("Size es %d\n",size);
-	buffer = malloc(size + ac + 1);
+	buffer = malloc(size + ac);
 	if (buffer == NULL)
 		return (NULL);
 	j = 0;
