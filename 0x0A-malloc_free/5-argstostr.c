@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * argstostr - check the code for Holberton School students.
  *
@@ -26,7 +27,8 @@ char *argstostr(int ac, char **av)
 			size++;
 		}
 	}
-	buffer = malloc(size + ac);
+	printf("Size es %d\n",size);
+	buffer = malloc(size + ac + 1);
 	if (buffer == NULL)
 		return (NULL);
 	j = 0;
