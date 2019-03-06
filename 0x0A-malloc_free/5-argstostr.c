@@ -15,6 +15,10 @@ char *argstostr(int ac, char **av)
 	char *buffer;
 
 	size = 0;
+	if (ac == 0)
+		return (NULL);
+	if (av == NULL)
+		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
