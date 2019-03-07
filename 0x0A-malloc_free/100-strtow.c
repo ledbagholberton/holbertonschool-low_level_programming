@@ -13,13 +13,13 @@ char **strtow(char *str)
 	int k, i = 0, j, flag, cont = 0, cont_w = 0;
 	char **array_str;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || *str == ' ')
 		return (NULL);
 	for (j = 0; str[j] != '\0'; j++)
 		if (str[j] == ' ' && str[j - 1] >= 33 && str[j - 1] <= 126)
 			cont++;
 	cont++;
-	array_str = malloc(sizeof(char *) * cont + 1);
+	array_str = malloc(sizeof(char *) * (cont + 1));
 	if (array_str == NULL)
 		return (NULL);
 	array_str[cont] = NULL;
@@ -34,7 +34,7 @@ char **strtow(char *str)
 		}
 		if (flag == 1)
 		{
-			array_str[i] = malloc(sizeof(char) * cont_w + 1);
+			array_str[i] = malloc(sizeof(char) * (cont_w + 1));
 			if (array_str[i] == NULL)
 				return (NULL);
 			for (k = 0; k < cont_w; k++, j++)

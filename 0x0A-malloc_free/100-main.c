@@ -27,7 +27,7 @@ int main(void)
 {
 	char **tab;
 
-	tab = strtow("  12 11 1 1 1 1 ");
+	tab = strtow(" ");
 
 	if (tab == NULL)
 	{
