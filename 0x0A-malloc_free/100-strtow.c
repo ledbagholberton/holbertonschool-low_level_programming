@@ -59,6 +59,7 @@ char **strtow(char *str)
 				return (NULL);
 			for (k = 0; k <= cont_w; k++, j++)
 				array_str[i][k] = str[j];
+			array_str[i][k] = '\0';
 			i++;
 			if (i == cont)
 				break;
