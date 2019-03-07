@@ -4,7 +4,7 @@
 /**
  * string_nconcat - concatenate tw strings.
  *
- *@s1 : String 1 
+ *@s1 : String 1
  *@s2 : String 2
  *@n : n bytes of string 2
  *
@@ -13,12 +13,15 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned i, a, b, size, pos;
+	unsigned int i, a, b, size, pos;
 	char *new_str;
 
-	for (a = 0; s1[a] != '\0'; a++);
-	for (b = 0; s2[b] != '\0'; b++);
-
+	for (a = 0; s1[a] != '\0'; a++)
+	{
+	}
+	for (b = 0; s2[b] != '\0'; b++)
+	{
+	}
 	if (n >= b)
 	{
 		size = a + b + 1;
