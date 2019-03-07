@@ -16,7 +16,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	for (j = 0; str[j] != '\0'; j++)
-		if (str[j] == ' ' && str[j - 1] >= 33 && str[j - 1] < 126)
+		if (str[j] == ' ' && str[j - 1] >= 33 && str[j - 1] <= 126)
 			cont++;
 	cont++;
 	array_str = malloc(sizeof(char *) * cont);
