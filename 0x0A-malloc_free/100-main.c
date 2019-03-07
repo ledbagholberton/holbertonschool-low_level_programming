@@ -27,7 +27,7 @@ int main(void)
 {
 	char **tab;
 
-	tab = strtow("      Holberton School         #cisfun      ");
+	tab = strtow("  12 11 1 1 1 1 ");
 
 	if (tab == NULL)
 	{

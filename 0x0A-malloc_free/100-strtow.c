@@ -19,27 +19,25 @@ char **strtow(char *str)
 		if (str[j] == ' ' && str[j - 1] >= 33 && str[j - 1] <= 126)
 			cont++;
 	cont++;
-	array_str = malloc(sizeof(char *) * cont);
+	array_str = malloc(sizeof(char *) * cont + 1);
 	if (array_str == NULL)
 		return (NULL);
-	array_str[cont - 1] = NULL;
-	j = 0;
-	for (; str[j] != '\0'; j++)
+	array_str[cont] = NULL;
+	for (j = 0; str[j] != '\0'; j++)
 	{
 		flag = 0;
 		cont_w = 0;
-		while (str[j + cont_w] != ' ' && str[j + cont_w + 1] != ' '
-		       && str[j + cont_w + 1] != '\0')
+		while (str[j + cont_w] != ' ')
 		{
 			cont_w++;
 			flag = 1;
 		}
 		if (flag == 1)
 		{
-			array_str[i] = malloc(sizeof(char) * cont_w + 2);
+			array_str[i] = malloc(sizeof(char) * cont_w + 1);
 			if (array_str[i] == NULL)
 				return (NULL);
-			for (k = 0; k <= cont_w; k++, j++)
+			for (k = 0; k < cont_w; k++, j++)
 				array_str[i][k] = str[j];
 			array_str[i][k] = '\0';
 			i++;
