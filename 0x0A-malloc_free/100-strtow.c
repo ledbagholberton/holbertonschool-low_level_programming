@@ -30,6 +30,8 @@ char **strtow(char *str)
 	int k, i = 0, j, flag, cont = 0, cont_w = 0;
 	char **array_str;
 
+	if (str == NULL || *str == '\0')
+		return (NULL);
 	for (j = 0; str[j] != '\0'; j++)
 		if (str[j] == ' ')
 		{
