@@ -2,7 +2,15 @@
 #include "holberton.h"
 #include <stdio.h>
 
-int main (int argc ,char *argv[])
+/**
+ * main - two string multiplication
+ * @argc: counter args
+ * @argv: args string pointer
+ *
+ * Return: 98 in case error.
+ */
+
+int main(int argc, char *argv[])
 {
 	int mulf;
 
