@@ -1,13 +1,22 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+/**
+ * _realloc - reallocate memory
+ * @ptr: the address of memory of old_size
+ * @old_size: the old size
+ * @new_size: the new size
+ *
+ * Return: Pointer to new size
+ */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *a, *b;
 	int size, i;
- 
+
 	if (old_size == new_size)
-		return(ptr);
+		return (ptr);
 	a = malloc(new_size);
 	if (a == NULL)
 		return (NULL);
