@@ -12,7 +12,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i;
+
 	dog_t *the_dog_ptr;
 	char *copy_name, *copy_owner;
 
@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; name[i] != '\0'; i++)
+/*	for (i = 0; name[i] != '\0'; i++)
 	{
 		copy_name[i] = name[i];
 	}
@@ -44,9 +44,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		copy_owner[i] = owner[i];
 	}
-	copy_owner[i] = '\0';
-	the_dog_ptr->name = copy_name;
-	the_dog_ptr->owner = copy_owner;
+	copy_owner[i] = '\0'; */ 
+	the_dog_ptr->name = name;
+	the_dog_ptr->owner = owner;
 	the_dog_ptr->age = age;
 	return (the_dog_ptr);
 }
