@@ -21,13 +21,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	copy_name = malloc(sizeof(name));
+	copy_name = malloc(sizeof(*name));
 	if (copy_name == NULL)
 	{
 		free(the_dog_ptr);
 		return (NULL);
 	}
-	copy_owner = malloc(sizeof(owner));
+	copy_owner = malloc(sizeof(*owner));
 	if (copy_owner == NULL)
 	{
 		free(the_dog_ptr);
