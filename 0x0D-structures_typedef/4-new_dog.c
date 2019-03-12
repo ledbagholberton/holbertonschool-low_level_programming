@@ -13,7 +13,7 @@ char *_strdup(char *str)
 	int cont, cont2;
 
 	if (!str)
-		return (NULL);
+		return (0);
 	for (cont = 0; str[cont] != '\0'; cont++)
 	{
 	}
