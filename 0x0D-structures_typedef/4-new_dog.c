@@ -62,17 +62,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(copy_name);
 		return (NULL);
 	}
-/*	for (i = 0; name[i] != '\0'; i++)
-	{
-		copy_name[i] = name[i];
-	}
-	copy_name[i] = '\0';
-	for (i = 0; owner[i] != '\0'; i++)
-	{
-		copy_owner[i] = owner[i];
-	}
-	copy_owner[i] = '\0';
-*/
 	the_dog_ptr->name = copy_name;
 	the_dog_ptr->owner = copy_owner;
 	the_dog_ptr->age = age;
