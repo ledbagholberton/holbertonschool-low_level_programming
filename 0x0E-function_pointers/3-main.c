@@ -3,10 +3,12 @@
 #include <stdlib.h>
 
 /**
- * main - Calc the operation in args
+ * main - calc the operation in args
  *
  * @argc: Number of arguments
  * @argv: Inputs Num1, op & Num2
+ *
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
