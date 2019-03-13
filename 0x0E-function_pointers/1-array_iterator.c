@@ -4,7 +4,8 @@
  * array_iterator -  Print something based on action
  * @array: the integer to print
  * @size: size of array
- * 
+ * @action: which function to execute
+ *
  * Return: Nothing.
  */
 
