@@ -53,7 +53,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op_add - Module two numbers
+ * op_mod - Module two numbers
  * @a: Number a
  * @b: Number b
  *
