@@ -31,7 +31,10 @@ void print_all(const char * const format, ...)
 		case 's':
 			pntr = va_arg(arg, char*);
 			if (pntr == NULL)
+			{
 				printf("%p", pntr);
+				break;
+			}
 			printf("%s", pntr);
 			break;
 		case 'i':
