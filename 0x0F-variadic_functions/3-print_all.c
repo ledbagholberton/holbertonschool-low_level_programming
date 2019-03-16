@@ -12,7 +12,7 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i, flag;
 	va_list arg;
 	char *pntr;
 
@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0')
 	{
-		flag = 0;
+		flag = 1;
 		switch (format[i])
 		{
 		case 'c':
@@ -41,10 +41,10 @@ void print_all(const char * const format, ...)
 			printf("%f", va_arg(arg, double));
 			break;
 		default:
-			flag = 1;
+			flag = 0;
 			NULL;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0' && flag == 1)
 			printf(", ");
 		i++;
 	}
