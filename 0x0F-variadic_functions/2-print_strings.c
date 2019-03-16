@@ -31,7 +31,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			pntr = va_arg(arg, char*);
 		}
 		if (pntr == NULL)
-			printf ("%p\n", pntr);
+			printf("%p\n", pntr);
 		else
 			printf("%s\n", pntr);
 	}
