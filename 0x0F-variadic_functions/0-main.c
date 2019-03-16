@@ -14,7 +14,7 @@ int main(void)
 	printf("%d\n", sum);
 	sum = sum_them_all(4, 98, 1024, 402, -1024);
 	printf("%d\n", sum);    
-	sum = sum_them_all(1, 98);
+	sum = sum_them_all(1, 0);
         printf("%d\n", sum);
 	sum = sum_them_all(3, -98, -1024, -402);
         printf("%d\n", sum);
