@@ -7,7 +7,7 @@ main:
 	  MOV RAX, 1
 	  MOV RDI, 1
 	  MOV RSI, str
-	  MOV RDX, 18
+	  MOV RDX, 17
 	  syscall
 
 	  MOV RAX, 60
