@@ -2,97 +2,55 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-void print_integer(va_list arg)
-{
-	printf("%d", va_arg(arg, int));
-}
-
-void print_chars(va_list arg)
-{
-	printf("%c", va_arg(arg, int));
-}
-
-void print_cadena(va_list arg)
-{
-/*	if(va_arg(arg, char*) == '\0')
-	{
-		printf("(nil)");
-	}
-	else
-	{
-	printf("%s", va_arg(arg, char*));
-	}
-*/
-	printf("%s", va_arg(arg, char*));
-}
-
-void print_float(va_list arg)
-{
-	printf("%f", va_arg(arg, double));
-}
-
-void nada(va_list arg)
-{
-	va_arg(arg, int);
-}
-
 /**
- * main - check the code for Holberton School students.
+ * print_all - print all the info .
  *
- * Return: Always 0.
+ *@format : string with info to print
+ *
+ * Return: Nothing.
  */
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
+	unsigned int i;
 	va_list arg;
-	mia_t mia[] = {
-		{"c", print_chars},
-		{"i", print_integer},
-		{"s", print_cadena},
-		{"f", print_float},
-		{"\0", nada},
-	};
+	char *pntr;
+
 
 	va_start(arg, format);
 	i = 0;
-	j = 0;
+
 	while (format[i] != '\0')
 	{
-	switch(wDay)
+		switch (format[i])
 		{
-		case 0: 
-			printf("Sunday");
+		case 'c':
+			printf("%c", va_arg(arg, int));
+			if (format[i + 1] != '\0')
+				printf(", ");
 			break;
-		case 1: 
-			printf("Monday");
+		case 's':
+			pntr = va_arg(arg, char*);
+			if (pntr == NULL)
+				printf("%p", pntr);
+			else
+				printf("%s", pntr);
+			if (format[i + 1] != '\0')
+				printf(", ");
 			break;
-		case 2: 
-			printf("Tuesday");
+		case 'i':
+			printf("%d", va_arg(arg, int));
+			if (format[i + 1] != '\0')
+				printf(", ");
 			break;
-		case 3: 
-			printf("Wednesday");
-			break;
-		case 4: 
-			printf("Thursday");
-			break;
-		case 5: 
-			printf("Friday");
-			break;
-		case 6: 
-			printf("Saturday");
+		case 'f':
+			printf("%f", va_arg(arg, double));
+			if (format[i + 1] != '\0')
+				printf(", ");
 			break;
 		default:
-			printf("Invalid weekday number.");
+			NULL;
 		}
-
-
-		j = 0;
-		while ((format[i] != *(mia[j].op)) && (*(mia[j].op) != '\0'))
-		{
-			j++;
-		}
-		mia[j].f(arg);
 		i++;
 	}
 	printf("\n");
