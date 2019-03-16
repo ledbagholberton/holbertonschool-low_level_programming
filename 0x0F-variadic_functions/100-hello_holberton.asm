@@ -1,0 +1,15 @@
+section .data
+str:	 db "Hello, Holberton$", 10, 0
+
+	section .text
+	global main
+main:
+	  MOV RAX, 1
+	  MOV RDI, 1
+	  MOV RSI, str
+	  MOV RDX, 18
+	  syscall
+
+	  MOV RAX, 60
+	  MOV RDI, 0
+	  syscall
