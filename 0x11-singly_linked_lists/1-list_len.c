@@ -12,7 +12,7 @@ size_t list_len(const list_t *h)
 	size_t a;
 
 	a = 0;
-	while (h != NULL)/* also is possible while(h) */ 
+	while (h != NULL)/* also is possible while(h) */
 	{
 		a++;
 		h = (*h).next;
