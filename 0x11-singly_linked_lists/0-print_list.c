@@ -2,6 +2,7 @@
 
 /**
  * print_list - print all the list linked
+ *@h: head of linked list
  *
  * Return: Type size_t return number of of nodes in the list.
  */
@@ -9,8 +10,8 @@
 size_t print_list(list_t *h)
 {
 	size_t a;
-	a = 0;
 
+	a = 0;
 	while (h != NULL)
 	{
 		if ((*h).str == NULL)
@@ -22,6 +23,6 @@ size_t print_list(list_t *h)
 		a++;
 		h = (*h).next;
 	}
-	return(a);
+	return (a);
 }
 
