@@ -16,8 +16,8 @@ int main(void)
 	add_node_end(&head, "Jennie");
 	add_node_end(&head, "&");
 	add_node_end(&head, "Jay");
-//	add_node_end(&head, "love");
-//	add_node_end(&head, "asm");
+	add_node_end(&head, "love");
+	add_node_end(&head, "asm");
 	print_list(head);
 	free_list(head);
 	head = NULL;
