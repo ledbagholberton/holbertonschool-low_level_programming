@@ -9,7 +9,7 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int cont; 
+	unsigned int cont;
 	listint_t *aux, *aux2;
 
 	cont = 1;
@@ -17,34 +17,31 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	aux2 = (*aux).next;
 	if (head == NULL || *head == NULL)
 	{
-		free (head);
+		free(*head);
 		return (-1);
 	}
 	if ((*aux).next == NULL)
-	{
-//		free (aux);
 		return (-1);
-	}
 	if (index == 0)
 	{
-		free (*head);
+		free(*head);
 		*head = (*aux).next;
 	}
 	else
 	{
-		while (index  > cont )
+		while (index > cont)
 		{
 		aux = aux2;
 		aux2 = (*aux).next;
 		if ((*aux2).next == NULL)
 		{
-			free (aux2);
+			free(aux2);
 			return (-1);
 		}
 		cont++;
 		}
 	(*aux).next = (*aux2).next;
-	free (aux2);
+	free(aux2);
 	}
 return (1);
 }

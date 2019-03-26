@@ -15,7 +15,7 @@ int sum_listint(listint_t *head)
 	aux = head;
 	value = 0;
 	if (aux == NULL)
-                return (0);
+		return (0);
 	while ((*aux).next != NULL)
 	{
 	value = value + (*aux).n;
