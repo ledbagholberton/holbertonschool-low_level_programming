@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_list - free all the linked list
+ * free_listint - free all the linked list
  *@head: head of linked list
  *
  * Return: Nothing
