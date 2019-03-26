@@ -1,0 +1,22 @@
+#include "lists.h"
+
+/**
+ * print_listint_safe - print all the list linked
+ *@head: head of linked list
+ *
+ * Return: Type size_t return number of of nodes in the list.
+ */
+
+size_t print_listint_safe(const listint_t *head)
+{
+	size_t a;
+
+	a = 0;
+	while (head != NULL)
+	{
+		printf("%d\n", (*head).n);
+		a++;
+		head = (*head).next;
+	}
+	return (a);
+}

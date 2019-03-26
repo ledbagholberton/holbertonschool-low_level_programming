@@ -22,8 +22,8 @@ int main(void)
 	add_nodeint_end(&head, 402);
 	add_nodeint_end(&head, 1024);
 	print_listint(head);
-	printf("A borrar el 5--------\n");
-	delete_nodeint_at_index(&head, 5);
+	printf("A borrar el NULL--------\n");
+	delete_nodeint_at_index(NULL, 5);
 	print_listint(head);
 	printf("A borrar el 0--------\n");
 	delete_nodeint_at_index(&head, 0);

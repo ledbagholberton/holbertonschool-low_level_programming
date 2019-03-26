@@ -17,7 +17,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	aux2 = (*aux).next;
 	if (head == NULL || *head == NULL)
 	{
-		free(*head);
 		return (-1);
 	}
 	if ((*aux).next == NULL)
