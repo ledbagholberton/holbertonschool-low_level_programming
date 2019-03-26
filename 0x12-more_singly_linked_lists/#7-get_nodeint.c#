@@ -1,0 +1,23 @@
+#include "lists.h"
+
+/**
+ * get_nodeint_at_index - take the n-th node from list
+ *@head: head of linked list
+ *@index: reference to N-th node
+ * Return: N-th node / 0 if doesnt exist
+ */
+
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+{
+        listint_t *aux;
+
+        aux = head;
+        while (index != 0)
+        {
+                aux = (*aux).next;
+                if (aux == NULL)
+                        return (0);
+                index--;
+        }
+        return (aux);
+}

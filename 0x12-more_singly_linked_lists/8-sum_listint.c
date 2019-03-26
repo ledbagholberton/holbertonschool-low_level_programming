@@ -1,0 +1,26 @@
+#include "lists.h"
+
+/**
+ * sum_listint - sum all fields n in the linked list
+ *@head: head of linked list
+ *
+ * Return: Sum of n values in linked list
+ */
+
+int sum_listint(listint_t *head)
+{
+	int value;
+	listint_t *aux;
+
+	aux = head;
+	value = 0;
+	if (aux == NULL)
+                return (0);
+	while ((*aux).next != NULL)
+	{
+	value = value + (*aux).n;
+	aux = (*aux).next;
+	}
+	value = value + (*aux).n;
+	return (value);
+}
