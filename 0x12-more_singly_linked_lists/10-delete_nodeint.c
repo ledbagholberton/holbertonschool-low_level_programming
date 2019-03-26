@@ -14,9 +14,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	cont = 1;
 	if (head == NULL || *head == NULL)
-	{
 		return (-1);
-	}
+	if (index > 0 && (*(*head)).next == NULL)
+		return (-1);
 	aux = *head;
 	aux2 = (*aux).next;
 	if (index == 0)
@@ -29,9 +29,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		while (index > cont)
 		{
 		aux = aux2;
-		aux2 = (*aux).next;
 		if ((*aux2).next == NULL)
 			return (-1);
+		aux2 = (*aux).next;
 		cont++;
 		}
 	(*aux).next = (*aux2).next;

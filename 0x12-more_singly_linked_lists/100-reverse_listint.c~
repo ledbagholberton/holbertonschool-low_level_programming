@@ -1,0 +1,10 @@
+#include "lists.h"
+/**
+ *
+ *@head: head of list
+ *
+ *Return: pointer to new head
+ */
+
+listint_t *reverse_listint(listint_t **head)
+{
