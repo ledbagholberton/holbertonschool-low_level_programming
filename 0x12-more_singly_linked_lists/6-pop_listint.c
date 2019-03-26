@@ -11,11 +11,11 @@ int pop_listint(listint_t **head)
 	int value;
 	listint_t aux;
 
+	if (*head == NULL)
+		return (0);
 	aux = **head;
 	value = (*(*head)).n;
 	free(*head);
 	*head = (aux).next;
-	if (*head == NULL)
-		value = 0;
 	return (value);
 }
