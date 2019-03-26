@@ -13,14 +13,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *aux, *aux2;
 
 	cont = 1;
+	if (head == NULL || *head == NULL)
+        {
+                return (-1);
+        }
 	aux = *head;
 	aux2 = (*aux).next;
-	if (head == NULL || *head == NULL)
-	{
-		return (-1);
-	}
-	if ((*aux).next == NULL)
-		return (-1);
 	if (index == 0)
 	{
 		free(*head);
