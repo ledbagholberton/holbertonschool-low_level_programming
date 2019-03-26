@@ -31,10 +31,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		aux = aux2;
 		aux2 = (*aux).next;
 		if ((*aux2).next == NULL)
-		{
-			free(aux2);
 			return (-1);
-		}
 		cont++;
 		}
 	(*aux).next = (*aux2).next;
