@@ -9,14 +9,24 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t a;
+	const listint_t *aux1, *aux2;
+	int cont = 0;
 
-	a = 0;
-	while (head != NULL)
+	aux1 = head;
+	aux2 = head;
+	while (aux1 != aux2 || aux2->next != NULL || aux2->next->next != NULL)
 	{
-		printf("%d\n", (*head).n);
-		a++;
-		head = (*head).next;
+		printf("[%p] %d\n", (void *)aux1, aux1->n);
+		aux1 = aux1->next;
+		aux2 = aux2->next->next;
 	}
-	return (a);
+	aux2 = head;
+	while (aux1 != aux2 || aux1->next != NULL)
+	{
+		printf("[%p] %d\n", (void *)aux1, aux1->n);
+		aux1 = aux1->next;
+		aux2 = aux2->next;
+		cont++;
+	}
+	return (cont);
 }
