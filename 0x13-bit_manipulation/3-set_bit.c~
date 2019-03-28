@@ -1,0 +1,24 @@
+#include "holberton.h"
+/**
+ * set_bit - set the bit in index.
+ *
+ *@n: integer
+ *@index: index
+ * Return: integer
+ */
+
+int set_bit(unsigned long int *n, unsigned int index)
+{
+	unsigned long int b;
+
+	b = 1;
+	if (index > (sizeof(n) * 8))
+                return (-1);
+	while (index != 0)
+	{
+		index--;
+		b = b << 1;
+	}
+	*n = *n | b;
+	return (1);
+}
