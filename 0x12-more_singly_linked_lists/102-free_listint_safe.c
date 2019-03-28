@@ -1,0 +1,35 @@
+#include "lists.h"
+
+/**
+ * free_listint_safe - free all blocks
+ *@h: head of linked list
+ *
+ * Return: size list deleted
+ */
+
+size_t free_listint_safe(listint_t **h)
+{
+	listint_t *aux1, *aux2, *tmp;
+	size_t cont = 0;
+
+	aux1 = *h;
+	aux2 = *h;
+	while (aux1 != aux2 || aux2->next != NULL || aux2->next->next != NULL)
+	{
+		tmp = aux1;
+		free(aux1);
+		aux1 = tmp->next;
+		aux2 = aux2->next->next;
+		cont++;
+	}
+	aux2 = *h;
+	while (aux1 != aux2 || aux1->next != NULL)
+	{
+		tmp = aux1;
+		free(aux1);
+		aux1 = tmp->next;
+		aux2 = aux2->next;
+		cont++;
+	}
+	return (cont);
+}
