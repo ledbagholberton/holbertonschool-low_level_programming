@@ -4,7 +4,7 @@
 /**
  * binary_to_uint - convert string with 0 &1 to integer.
  *
- *@b: c
+ *@b: stringc
  * Return: integer
  */
 
