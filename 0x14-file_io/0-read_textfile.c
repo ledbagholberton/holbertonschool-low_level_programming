@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 #include <stdlib.h>
 
@@ -23,11 +22,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	leido = read(fd, buf, letters + 1);
 	if (leido == -1)
+	{
+		free(buf);
+		close(fd);
 		return (0);
+	}
 	buf[letters + 1] = '\0';
 	number = write(1, buf, leido + 1);
 	if (number == -1)
-		return (0);
+	{
+                free(buf);
+                close(fd);
+                return (0);
+        }
 	free(buf);
 	close(fd);
 	return (number);
