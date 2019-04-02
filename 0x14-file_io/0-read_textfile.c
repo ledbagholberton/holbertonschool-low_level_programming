@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf = malloc(1024);
 	if (buf == NULL)
 	{
-		free(buf);
+		close(fd);
 		return (0);
 	}
 	leido = read(fd, buf, letters);
