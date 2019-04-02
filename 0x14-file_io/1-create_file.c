@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include "holberton.h"
-/**                                                                                                                                                                                                               
- * read_textfile- read and sent to stdout a number of charss.
+/**
+ *create_file- read and sent to stdout a number of charss.
  *
  *@filename: name of file
- *@letters: number of letters
+ *@text_content: content
  * Return: Number of printed chars.
  */
 int create_file(const char *filename, char *text_content)
@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 	{
-		close (fd);
+		close(fd);
 		return (1);
 	}
 	for (leido = 0; text_content[leido] != '\0'; leido++)
