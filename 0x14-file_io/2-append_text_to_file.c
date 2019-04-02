@@ -24,7 +24,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	for (leido = 0; text_content[leido] != '\0'; leido++)
 		;
-	write(fd, text_content, leido);
+	number = write(fd, text_content, leido);
 	if (number == -1)
 	{
 		close(fd);
