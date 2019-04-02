@@ -23,15 +23,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buf);
 		return (0);
 	}
-	leido = read(fd, buf, letters + 1);
+	leido = read(fd, buf, letters);
 	if (leido == -1)
 	{
 		free(buf);
 		close(fd);
 		return (0);
 	}
-	buf[letters + 1] = '\0';
-	number = write(1, buf, leido + 1);
+	number = write(1, buf, leido);
 	if (number == -1)
 	{
 		free(buf);
