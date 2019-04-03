@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -22,21 +20,22 @@ int main(int ac, char **av)
 	char *data1 = "2's complement, little endian";
 	char *data2 = "2's complement, big endian";
 	char *version = "1 (current)";
-	char *OS1 = "System V";
-	char *OS2 = "HP-UX";
-	char *OS3 = "NetBSD";
-	char *OS4 = "Linux";
-        char *OS5 = "AIX";
-        char *OS6 = "IRIX";
-	char *OS7 = "FreeBSD";
-        char *OS8 = "Tru64";
-        char *OS9 = "Novell Modesto";
-	char *OSa = "OpenBSD";
-        char *OSb = "OpenVMS";
-        char *OSc = "NonStop Kernel";
-        char *OSd = "AROS";
-        char *OSe = "Fenix OS";
-        char *OSf = "CloudABI";
+	char *OS[15];
+	OS[1] = "System V";
+	OS[2] = "HP-UX";
+	OS[3] = "NetBSD";
+	OS[4] = "Linux";
+        OS[5] = "AIX";
+        OS[6] = "IRIX";
+	OS[7] = "FreeBSD";
+        OS[8] = "Tru64";
+        OS[9] = "Novell Modesto";
+	OS[10] = "OpenBSD";
+        OS[11] = "OpenVMS";
+        OS[12] = "NonStop Kernel";
+        OS[13] = "AROS";
+        OS[14] = "Fenix OS";
+        OS[15] = "CloudABI";
 	char *ABI = "0";
 	char *type = "EXEC (Executable File)";
 	char *a1, *a2, *a3, *a4, *a5, *a6; 
@@ -74,12 +73,12 @@ int main(int ac, char **av)
 
 	a1 = (buf[5] == 1) ? elf1 : elf2;
 	a2 = (buf[6] == 0) ? data1 : data2;
-
-	printf("%s%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s%s\n",str2 ,a1, str3, a2, str4, a3, str5, a4, str6, a5, str7, a6); 
-
-
+	for (res = 0; res <= buf[7]; res++)
+		;
+	a5 = OS[res];
+	printf("%s%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s%s\n",str2 ,a1, str3, a2, str4, version, str5, a5, str6, ABI, str7, type); 
 	cerrado = close(fd_from);
 	if (cerrado == -1)
-		return (-1 * fd_from);
+		return (98);
 	return (0);
 }
