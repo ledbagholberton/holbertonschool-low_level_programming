@@ -29,8 +29,8 @@ int main(int ac, char **av)
 	char *OS[15];
 	char *ABI = "0";
 	char *type = "EXEC (Executable File)";
-	char *a1, *a2, *a3, *a4, *a5, *a6;
-	int res, fd_from, fd_to, leido, escrito, cerrado;
+	char *a1, *a2, *a5;
+	int res, fd_from, leido, cerrado;
 	char buf[32];
 
 	OS[0] = "UNIX - ";
