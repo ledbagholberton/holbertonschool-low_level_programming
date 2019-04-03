@@ -77,6 +77,21 @@ int main(int ac, char **av)
 		;
 	a5 = OS[res];
 	printf("%s%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s%s\n",str2 ,a1, str3, a2, str4, version, str5, a5, str6, ABI, str7, type); 
+
+	if(buf[4] == 1)
+	{
+		printf("%s0x",str8);
+		for (res = 18; res <= 21; res++)
+			printf("%x", buf[res]);
+		printf("\n");
+	}
+	else
+	{
+                printf("%s0x",str8);
+                for (res = 18; res <= 25; res++)
+                        printf("%x", buf[res]);
+                printf("\n");
+        }
 	cerrado = close(fd_from);
 	if (cerrado == -1)
 		return (98);
