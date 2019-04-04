@@ -16,7 +16,7 @@ void header(char *buffer)
 	int res;
 
 	printf("%s", str1);
-	for (res = 0; res <= 15; res++)
+	for (res = 0; res <= 30; res++)
 		printf("%02x ", buffer[res]);
 	printf("\n");
 }
@@ -53,7 +53,7 @@ void elf_data(char *buffer)
 void os(char *buffer)
 {
 	char *str5 = "  OS/ABI:                          ";
-	char *OS[15], *a5;
+	char *OS[18], *a5;
 	int res;
 
 	OS[1] = "UNIX - System V";
@@ -103,7 +103,8 @@ void abi_type(char *buffer)
 	type[3] = "DYN (Shared object file)";
 	type[4] = "CORE (Core file)";
 
-	for (res = 0; res <= buffer[10]; res++)
+	printf("Type es: %x\n", buffer[16]);
+	for (res = 0; res < buffer[16]; res++)
 		;
 	a6 = "0";
 	a7 = type[res];
@@ -122,15 +123,25 @@ void addr(char *buffer)
 	if (buffer[4] == 1)
 	{
 		printf("%s0x", str8);
-		for (res = 18; res <= 21; res++)
-			printf("%x02", buffer[res]);
+		res = 27;
+		while (res >= 24)
+		{
+		if (buffer[res] != 0)
+			printf("%0x", buffer[res]);
+		res--;
+		}
 		printf("\n");
 	}
 	else
 	{
 		printf("%s0x", str8);
-		for (res = 18; res <= 25; res++)
-			printf("%x02", buffer[res]);
+		res = 31;
+		while (res >= 24)
+		{
+		if (buffer[res] != 0)
+			printf("%0x", buffer[res]);
+		res--;
+		}
 		printf("\n");
 	}
 }
