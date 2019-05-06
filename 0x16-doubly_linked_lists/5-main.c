@@ -1,3 +1,4 @@
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -23,8 +24,23 @@ int main(void)
 	add_dnodeint_end(&head, 402);
 	add_dnodeint_end(&head, 1024);
 	print_dlistint(head);
-	node = get_dnodeint_at_index(head, 8);
+	node = get_dnodeint_at_index(head, 0);
 	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 1);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 2);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 3);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 4);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 5);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 6);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 7);
+	printf("%d\n", node->n);
+	node = get_dnodeint_at_index(head, 50);
 	free_dlistint(head);
 	head = NULL;
 	return (EXIT_SUCCESS);

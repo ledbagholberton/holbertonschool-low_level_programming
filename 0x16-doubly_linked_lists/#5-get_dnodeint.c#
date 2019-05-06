@@ -1,3 +1,4 @@
+
 #include "lists.h"
 
 /**
@@ -13,11 +14,11 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	aux = head;
 	if (head == NULL)
-		return NULL;
+		return (NULL);
 	if (head->next == NULL)
-		return(head);
+		return (head);
 	cont = 0;
-	while (aux)
+	while (aux != NULL)
 	{
 		if (cont == index)
 			break;
@@ -26,5 +27,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 	if (index > cont)
 		return (NULL);
-	return(aux);
+	return (aux);
 }
