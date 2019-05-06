@@ -1,0 +1,13 @@
+#include "holberton.h"
+
+/**
+ * _isupper - returns 1 if input is Uppercase
+ *
+ * @c: Input with charto evaluate
+ * Return: Int 1 or 0
+ */
+
+int _isupper(int c)
+{
+	return (c >= 'A' && c <= 'Z' ? 1 : 0);
+}
