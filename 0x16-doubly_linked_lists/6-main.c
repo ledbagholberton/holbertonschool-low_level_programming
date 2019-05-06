@@ -14,12 +14,20 @@ int main(void)
 	int sum;
 
 	head = NULL;
+	sum = sum_dlistint(head);
+	printf("sum = %d\n", sum);
 	add_dnodeint_end(&head, 0);
+	sum = sum_dlistint(head);
+	printf("sum = %d\n", sum);
 	add_dnodeint_end(&head, 1);
 	add_dnodeint_end(&head, 2);
 	add_dnodeint_end(&head, 350);
+	sum = sum_dlistint(head);
+	printf("sum = %d\n", sum);
 	add_dnodeint_end(&head, 4);
 	add_dnodeint_end(&head, 98);
+	sum = sum_dlistint(head);
+	printf("sum = %d\n", sum);
 	add_dnodeint_end(&head, 402);
 	add_dnodeint_end(&head, 1024);
 	sum = sum_dlistint(head);
