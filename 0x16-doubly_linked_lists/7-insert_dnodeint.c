@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  *insert_dnodeint_at_index - insert node
  *@h: head of linked list
@@ -25,6 +24,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		while (idx != cont)
 		{
 			aux1 = aux1->next;
+			if (aux1 == NULL)
+			{
+				free(new);
+				return (NULL);
+			}
 			cont++;
 		}
 		if (aux1->next == NULL)
@@ -32,7 +36,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		else
 		{
 			aux2 = aux1->next;
-
 			aux1->next = new;
 			new->prev = aux1;
 			new->next = aux2;
