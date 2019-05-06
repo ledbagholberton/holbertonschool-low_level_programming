@@ -13,7 +13,16 @@ int main(void)
 	dlistint_t *head;
 
 	head = NULL;
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("xxxxxxxxxxx-----------------\n");
+
 	add_dnodeint_end(&head, 0);
+	print_dlistint(head);
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+
 	add_dnodeint_end(&head, 1);
 	add_dnodeint_end(&head, 2);
 	add_dnodeint_end(&head, 3);
