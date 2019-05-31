@@ -19,7 +19,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	size_arr = (*ht).size;
 	b = key_index((unsigned char *)key, size_arr);
 	(*new_node).key = strdup(key);
+	if ((*new_node).key == NULL)
+		return (0);
 	(*new_node).value = strdup(value);
+	if ((*new_node).value == NULL)
+		return (0);
 	if ((*ht).array[b] == NULL)
 	{
 		(*ht).array[b] = new_node;
