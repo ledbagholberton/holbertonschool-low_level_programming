@@ -30,10 +30,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		tmp = (*ht).array[b];
 		tmp1 = tmp;
-		while ((*tmp1).next != NULL)
+		while (((*tmp1).next != NULL) && (flag == 0))
 		{
 			if (strcmp((*tmp1).key, key) == 0)
 			{
+				free ((*tmp1).value);
 				(*tmp1).value = strdup(value);
 				flag = 1;
 			}
