@@ -10,16 +10,17 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node, *tmp;
+	hash_node_t *new_node, *tmp, *tmp1;
 	unsigned long int b, size_arr;
+	int flag;
 
-	new_node = (hash_node_t *) malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
-		return (0);
 	if (strcmp(key, "") == 0)
 		return (0);
 	size_arr = (*ht).size;
 	b = key_index((unsigned char *)key, size_arr);
+	new_node = (hash_node_t *) malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+		return (0);
 	(*new_node).key = strdup(key);
 	if ((*new_node).key == NULL)
 		return (0);
@@ -34,8 +35,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		tmp = (*ht).array[b];
+		tmp1 = tmp;
+		flag = 0;
+		while ((*tmp1).next != NULL)
+		{
+			if (strcmp((*tmp1).key, key) == 0)
+			{
+				(*tmp1).value = strdup(value);
+				flag = 1;
+			}
+			else
+				tmp1 = (*tmp1).next;
+		}
+		if (flag == 0)
+		{
 		(*new_node).next = tmp;
 		(*ht).array[b] = new_node;
+		}
 	}
 	return (1);
 }
