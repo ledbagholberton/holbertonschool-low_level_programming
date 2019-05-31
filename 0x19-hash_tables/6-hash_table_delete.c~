@@ -1,0 +1,40 @@
+#include "hash_tables.h"
+/**
+ * hash_table_delete - delete  hash table
+ *
+ * Return: Always EXIT_SUCCESS.
+ */
+void hash_table_delete(hash_table_t *ht)
+{
+	size_arr = (*ht).size;
+	while (i < size_arr)
+	{
+		if ((*ht).array[i] != NULL)
+		{
+			tmp = (*ht).array[i];
+			free_list(hash_table_t *tmp);
+		}
+		i++;
+	}
+}
+
+
+/**
+ * free_list - free all the linked list
+ *@head: head of linked list
+ *
+ * Return: Nothing
+ */
+void free_list(hash_table_t *head)
+{
+	hash_table_t *aux;
+
+	aux = head;
+	while (head)
+	{
+		aux = head;
+		free(head->str);
+		free(head);
+		head = aux->next;
+	}
+}
