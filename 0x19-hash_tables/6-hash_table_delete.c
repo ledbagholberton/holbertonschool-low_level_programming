@@ -1,13 +1,13 @@
 #include "hash_tables.h"
 /**
  * hash_table_delete - delete  hash table
- *
+ *@ht: hash table
  * Return: Always EXIT_SUCCESS.
  */
 void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t *tmp;
-	long unsigned int size_arr, i;
+	unsigned long int size_arr, i;
 
 	size_arr = (*ht).size;
 	while (i < size_arr)

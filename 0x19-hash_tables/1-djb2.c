@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
  * hash_djb2 - algorithm for hash codding.
- *
+ *@str: key
  * Return: Hash
  */
 unsigned long int hash_djb2(const unsigned char *str)

@@ -1,14 +1,17 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * hash_table_set - set hash table
+ *@ht: hash table
+ *@key: key hash table
+ *@value: value hash table
+ * Return: o if failure / 1 if success
  */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node, *tmp;
-	long unsigned int b, size_arr;
+	unsigned long int b, size_arr;
 
 	new_node = (hash_node_t *) malloc(sizeof(hash_node_t));
 	if (new_node == NULL)

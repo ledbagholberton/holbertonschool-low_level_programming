@@ -1,8 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * key_index - generate the key_index
+ *@key: key hash table
+ *@size: array size
  * Return: Always EXIT_SUCCESS.
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
