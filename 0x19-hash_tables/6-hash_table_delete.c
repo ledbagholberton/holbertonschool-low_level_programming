@@ -15,7 +15,6 @@ void hash_table_delete(hash_table_t *ht)
 		if ((*ht).array[i] != NULL)
 		{
 			tmp = (*ht).array[i];
-			printf("array %lu : %p\n", i, (void*)tmp);
 			free_list(tmp);
 		}
 		i++;
