@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int size_arr, b;
 	int flag = 0;
 
-	if (strcmp(key, "") == 0)
+	if ((strcmp(key, "") == 0) || ht == NULL)
 		return (0);
 	size_arr = (*ht).size;
 	b = key_index((unsigned char *)key, size_arr);
