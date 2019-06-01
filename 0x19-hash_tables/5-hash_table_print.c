@@ -10,14 +10,15 @@ void hash_table_print(const hash_table_t *ht)
 	char *m_key, *m_value;
 	unsigned long int size_arr, i, flag = 0;
 
+	if (ht != NULL)
+	{
 	size_arr = (*ht).size;
 	i = 0;
 	printf("{");
 	while (i < size_arr)
 	{
 		if ((*ht).array[i] != NULL)
-		{
-			tmp = (*ht).array[i];
+		{ tmp = (*ht).array[i];
 			while ((*tmp).next != NULL)
 			{
 				m_key = (*tmp).key;
@@ -44,4 +45,5 @@ void hash_table_print(const hash_table_t *ht)
 		i++;
 	}
 	printf("}\n");
+	}
 }
