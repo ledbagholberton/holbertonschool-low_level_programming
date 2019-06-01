@@ -35,11 +35,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				free((*tmp1).value);
 				(*tmp1).value = strdup(value);
+				free((*new_node).value);
+				free((*new_node).key);
+				free(new_node);
 				flag = 1;
 			}
 			else
 				tmp1 = (*tmp1).next;
-		} while (((*tmp1).next != NULL) && (flag == 0));
+		} while ((tmp1 != NULL) && (flag == 0));
 		if (flag == 0)
 		{
 		(*new_node).next = tmp;
