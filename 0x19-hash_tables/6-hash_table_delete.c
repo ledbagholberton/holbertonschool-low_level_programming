@@ -7,7 +7,7 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t *tmp;
-	unsigned long int size_arr, i;
+	unsigned long int size_arr, i = 0;
 
 	size_arr = (*ht).size;
 	while (i < size_arr)
@@ -15,10 +15,13 @@ void hash_table_delete(hash_table_t *ht)
 		if ((*ht).array[i] != NULL)
 		{
 			tmp = (*ht).array[i];
+			printf("array %lu : %p\n", i, (void*)tmp);
 			free_list(tmp);
 		}
 		i++;
 	}
+	free((*ht).array);
+	free(ht);
 }
 
 
