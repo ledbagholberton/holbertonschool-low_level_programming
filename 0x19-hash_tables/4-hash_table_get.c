@@ -17,8 +17,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	tmp = (*ht).array[b];
 	m_key = (*tmp).key;
-	while (strcmp(key, m_key) != 0)
+	while ((strcmp(key, m_key) != 0) || tmp == NULL)
+	{
 		tmp = (*tmp).next;
+		if (tmp == NULL)
+			return (NULL);
+	}
 	m_value = (*tmp).value;
 	return (m_value);
 }
