@@ -23,6 +23,7 @@ int lomuto(int *array, int low_pos, int high_pos, size_t size)
 	{
 		int i, j, pivot;
 
+		size = size * 1;
 		i = low_pos - 1;
 		for (j = low_pos; j < high_pos; j++)
 		{
@@ -30,11 +31,11 @@ int lomuto(int *array, int low_pos, int high_pos, size_t size)
 			{
 				i++;
 				swap_list(array, i, j);
-				print_array(array, size);
 			}
 		}
 		pivot = i + 1;
 		swap_list(array, pivot, high_pos);
+		printf("SIZE = %lui\n",size);
 		print_array(array, size);
 		return(pivot);
 	}
