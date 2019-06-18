@@ -1,5 +1,6 @@
 #include "sort.h"
 #include <stdio.h>
+
 /**
  * quick_sort - Algorithm quick_sort
  *@array: array to order
@@ -8,21 +9,30 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	int low_pos, high_pos, size_low, size_high, pivot;
+	if (size > 1)
+		quick_sort2(array, 0, size - 1, size);
+}
 
-	if (size > 0)
+/**
+ * quick_sort2 - Algorithm quick_sort
+ *@array: array to order
+ *@size: size of array
+ *@low_pos: low_pos
+ *@high_pos: high_pos
+ * Return: Non return
+ */
+void quick_sort2(int *array, int low_pos, int high_pos, size_t size)
+{
+	int pivot;
+
+	if (high_pos - low_pos > 0)
 	{
-		high_pos = (int)size - 1;
-		low_pos = size - high_pos - 1;
-		pivot = lomuto(array, low_pos, high_pos, size);
-		size_low = (pivot) - low_pos;
-		if (size_low > 0)
-			quick_sort(array, size_low);
-		size_high = (high_pos) - (pivot);
-		if (size_high > 0)
-			quick_sort(&(array[pivot + 1]), size_high);
+		pivot = lomuto(array, (int)low_pos, (int)high_pos, size);
+		quick_sort2(array, (int)low_pos, pivot - 1, size);
+		quick_sort2(array, pivot + 1, (int)high_pos, size);
 	}
 }
+
 /**
  * lomuto - partition algorithm
  *@array: array
@@ -35,7 +45,6 @@ int lomuto(int *array, int low_pos, int high_pos, size_t size)
 	{
 		int i, j, pivot;
 
-		size = size * 1;
 		i = low_pos - 1;
 		for (j = low_pos; j < high_pos; j++)
 		{
@@ -43,16 +52,20 @@ int lomuto(int *array, int low_pos, int high_pos, size_t size)
 			{
 				i++;
 				swap_list(array, i, j);
-				if (i + 1 != j)
+				if (i != j)
 					print_array(array, size);
 			}
 		}
 		pivot = i + 1;
-		swap_list(array, pivot, high_pos);
-		if (i - 1 != pivot)
+		if (pivot != high_pos && array[pivot] != array[high_pos])
+		{
+			swap_list(array, pivot, high_pos);
 			print_array(array, size);
+		}
+
 		return (pivot);
 	}
+
 /**
  * swap_list - Swap
  *@array: array
