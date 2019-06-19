@@ -48,18 +48,20 @@ int hoare(int *array, int low_pos, int high_pos, size_t size)
 		i = low_pos;
 		pivot = array[i];
 		j = high_pos;
-		while (j != i)
+		while (j > i)
 		{
 			if (array[j] > pivot)
 				j--;
 			else
 			{
 				array[i] = array[j];
+				printf("i=%d, j=%d\n",i, j);
 				print_array(array, size);
 				i++;
 				if (array[i] > pivot)
 				{
 					array[j] = array[i];
+					printf("i=%d, j=%d\n", i,j);
 					print_array(array, size);
 					j--;
 				}
