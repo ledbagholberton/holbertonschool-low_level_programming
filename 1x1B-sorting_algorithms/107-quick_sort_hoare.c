@@ -50,16 +50,14 @@ int hoare(int *array, int low_pos, int high_pos, size_t size)
 		j = high_pos + 1;
 		while (1)
 		{
-			do
-			{
+			do {
 				i++;
 			} while (array[i] < pivot);
-			do
-			{
+			do {
 				j--;
 			} while (array[j] > pivot);
 			if (i >= j)
-				return j;
+				return (j);
 			swap_list(array, i, j);
 			print_array(array, size);
 		}
@@ -71,7 +69,6 @@ int hoare(int *array, int low_pos, int high_pos, size_t size)
  *@pos1: pos1
  *@pos2: pos2
  * Return: Non return
-
  */
 void swap_list(int *array, int pos1, int pos2)
 {
