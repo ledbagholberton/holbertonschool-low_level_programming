@@ -28,7 +28,7 @@ void quick_sort_hoare2(int *array, int low_pos, int high_pos, size_t size)
 	if (high_pos - low_pos > 0)
 	{
 		pivot = hoare(array, (int)low_pos, (int)high_pos, size);
-		quick_sort_hoare2(array, (int)low_pos, pivot - 1, size);
+		quick_sort_hoare2(array, (int)low_pos, pivot, size);
 		quick_sort_hoare2(array, pivot + 1, (int)high_pos, size);
 	}
 }
@@ -45,32 +45,24 @@ int hoare(int *array, int low_pos, int high_pos, size_t size)
 	{
 		int i, j, pivot;
 
-		i = low_pos;
-		pivot = array[i];
-		j = high_pos;
-		while (j > i)
+		i = low_pos - 1;
+		pivot = array[low_pos];
+		j = high_pos + 1;
+		while (1)
 		{
-			if (array[j] > pivot)
-				j--;
-			else
+			do
 			{
-				array[i] = array[j];
-				printf("i=%d, j=%d\n",i, j);
-				print_array(array, size);
 				i++;
-				if (array[i] > pivot)
-				{
-					array[j] = array[i];
-					printf("i=%d, j=%d\n", i,j);
-					print_array(array, size);
-					j--;
-				}
-				else
-					i++;
-			}
+			} while (array[i] < pivot);
+			do
+			{
+				j--;
+			} while (array[j] > pivot);
+			if (i >= j)
+				return j;
+			swap_list(array, i, j);
+			print_array(array, size);
 		}
-		array[i] = pivot;
-		return (i);
 	}
 
 /**

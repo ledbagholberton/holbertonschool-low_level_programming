@@ -25,8 +25,6 @@ void quick_sort(int *array, size_t size);
 void quick_sort2(int *array, int low_pos, int high_pos, size_t size);
 int lomuto(int *array, int low_pos, int high_pos, size_t size);
 void counting_sort(int *array, size_t size);
-void merge_sort(int *array, size_t size);
-void merge(int *new_arr1, int *new_arr2);
 int *merge_sort2(int *array, size_t size);
 int *merge(int *new_arr1, int *new_arr2, int *new_arr3);
 void quick_sort_hoare(int *array, size_t size);
