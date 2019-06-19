@@ -58,8 +58,11 @@ int hoare(int *array, int low_pos, int high_pos, size_t size)
 			} while (array[j] > pivot);
 			if (i >= j)
 				return (j);
-			swap_list(array, i, j);
-			print_array(array, size);
+			if (array[i] != array[j])
+			{
+				swap_list(array, i, j);
+				print_array(array, size);
+			}
 		}
 	}
 
