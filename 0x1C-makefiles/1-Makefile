@@ -1,7 +1,7 @@
 #Makefile - with rules all and variables CC, SRC
 
 CC  = gcc
-SRC = *.c
+SRC = main.c holberton.c
 
 all:
 	$(CC) $(SRC) -o holberton
