@@ -15,26 +15,30 @@ void counting_sort(int *array, size_t size)
 	int i, range, j, a, pos;
 
 	range = 0;
-	for (i = 0; i < (int)size; i++)
-		if (array[i] > range)
-			range = array[i];
-	new_array = malloc(range + 1);
-	for (i = 0; i <= range + 1; i++)
-		new_array[i] = 0;
-	for (i = 0; i < (int)size; i++)
-		new_array[array[i]]++;
-	for (i = 1; i <= range + 1; i++)
-		new_array[i] = new_array[i] + new_array[i - 1];
-	print_array(new_array, range + 1);
-	array_sorted =  malloc(size);
-	for (j = size - 1; j >= 0; j--)
+	if (size > 2)
 	{
-		a = array[j];
-		pos = new_array[a];
-		new_array[a]--;
-		array_sorted[pos - 1] = a;
+		for (i = 0; i < (int)size; i++)
+			if (array[i] > range)
+				range = array[i];
+		new_array = malloc((range + 1)*sizeof(int));
+		for (i = 0; i <= range + 1; i++)
+			new_array[i] = 0;
+		for (i = 0; i < (int)size; i++)
+			new_array[array[i]]++;
+		for (i = 1; i <= range + 1; i++)
+			new_array[i] = new_array[i] + new_array[i - 1];
+		print_array(new_array, range + 1);
+		array_sorted =  malloc(size * sizeof(int));
+		for (j = size - 1; j >= 0; j--)
+		{
+			a = array[j];
+			pos = new_array[a];
+			new_array[a]--;
+			array_sorted[pos - 1] = a;
+		}
+		for (i = 0; i < (int)size; i++)
+			array[i] = array_sorted[i];
+		free(new_array);
+		free(array_sorted);
 	}
-	for (i = 0; i < (int)size; i++)
-		array[i] = array_sorted[i];
-	free(new_array);
 }
