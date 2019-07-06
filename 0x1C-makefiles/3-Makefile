@@ -9,16 +9,20 @@ RM = rm
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+.ONESHELL:
 clean:
 	$(RM) -f *~ holberton
 
+.ONESHELL:
 oclean:
 	$(RM) -f $(OBJ)
 
+.ONESHELL:
 fclean:
 	$(RM) -f *~ holberton
 	$(RM) -f $(OBJ)
 
+.ONESHELL:
 re: oclean all
 
 edit : $(SRC)
