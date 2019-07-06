@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+"""
+5-island_perimeter
+"""
+def island_perimeter(malla):
+    """ Island perimeter """
+    
+    grid = []
+    for i in range(len(malla)):
+        grid[i] = malla[i].copy()
+
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            try:
+                if grid[i][j] == 1:
+                    if grid[i - 1][j] == 0:
+                        grid[i - 1][j] == 2
+                        print("ping")
+                    elif grid[i - 1][j] == 2:
+                        grid[i - 1][j] == 4
+                        print("pong")
+                    if grid[i][j - 1] == 0:
+                        grid[i][j - 1] == 2
+                        print("ping")
+                    elif grid[i][j - 1] == 2:
+                        grid[i][j - 1] == 4
+                        print("pong")
+                    if grid[i + 1][j] == 0:
+                        grid[i + 1][j] == 2
+                        print("ping")
+                    elif grid[i + 1][j] == 2:
+                        grid[i + 1][j] == 4
+                        print("pong")
+                    if grid[i][j + 1] == 0:
+                        grid[i][j + 1] == 2
+                        print("ping")
+                    elif grid[i][j + 1] == 2:
+                        grid[i][j + 1] == 4
+                        print("pong")
+            except IndexError:
+                pass
+    count = 0
+    for i in range(len(grid)):
+        print(grid[i])
+        for j in range(len(grid[i])):
+            count += grid[i][j]
+    return(count)
