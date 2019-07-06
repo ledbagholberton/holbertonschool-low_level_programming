@@ -11,7 +11,7 @@ all: $(OBJ)
 
 .ONESHELL:
 clean:
-	$(RM) -f *~ holberton
+	$(RM) -f *~ $(NAME)
 
 .ONESHELL:
 oclean:
@@ -19,7 +19,7 @@ oclean:
 
 .ONESHELL:
 fclean:
-	$(RM) -f *~ holberton
+	$(RM) -f *~ $(NAME)
 	$(RM) -f $(OBJ)
 
 .ONESHELL:
