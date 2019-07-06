@@ -22,5 +22,5 @@ fclean:
 
 re: oclean all
 
-edit : $(OBJ)
-	cc -c $(CFLAGS) edit $(OBJ)
+edit : $(SRC)
+	$(CC) -c $(CFLAGS) $(SRC)
