@@ -23,4 +23,4 @@ fclean:
 re: oclean all
 
 edit : $(SRC)
-	$(CC) -c $(CFLAGS) $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -c
