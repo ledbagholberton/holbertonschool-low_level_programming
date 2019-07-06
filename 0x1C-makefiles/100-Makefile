@@ -1,0 +1,26 @@
+#Makefile - with rules all and variables CC, SRC
+
+CC  = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:c=o)
+NAME = holberton
+RM = rm
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(OBJ) $(CFLAGS) -o $(NAME)
+
+clean:
+	$(RM) -f *~ holberton
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean:
+	$(RM) -f *~ holberton
+	$(RM) -f $(OBJ)
+
+re: oclean all
+
+edit : $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -c
