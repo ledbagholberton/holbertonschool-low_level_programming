@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-5-island_perimeter
-"""
+""" 5-island_perimeter """
+
+
 def island_perimeter(malla):
     """ Island perimeter """
 
