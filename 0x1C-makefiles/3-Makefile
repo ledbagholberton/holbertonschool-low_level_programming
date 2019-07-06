@@ -1,0 +1,22 @@
+#Makefile - with rules all and variables CC, SRC
+
+CC  = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:c=o)
+NAME = holberton
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	rm -f *~ holberton
+oclean:
+	rm -f main.o holberton.o
+fclean:
+	rm -f *~ holberton
+	rm -f main.o holberton.o
+
+re: oclean all
+
+edit : $(OBJ)
+	cc -c edit $(OBJ)
