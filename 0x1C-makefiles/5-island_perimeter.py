@@ -9,7 +9,6 @@ def island_perimeter(malla):
     grid = [row[:] for row in malla]
     count = 0
     for i in range(len(grid)):
-        print(grid[i])
         for j in range(len(grid[i])):
             try:
                 if grid[i][j] == 1:
