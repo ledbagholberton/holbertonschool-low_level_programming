@@ -1,6 +1,6 @@
 #Makefile - with rules all and variables CC, SRC
 
-CC  = -gcc
+CC  = gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:c=o)
 NAME = holberton
