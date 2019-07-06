@@ -11,11 +11,13 @@ all: $(OBJ)
 
 clean:
 	$(RM) -f *~ holberton
+
 oclean:
-	$(RM) -f main.o holberton.o
+	$(RM) -f $(OBJ)
+
 fclean:
 	$(RM) -f *~ holberton
-	$(RM) -f main.o holberton.o
+	$(RM) -f $(OBJ)
 
 re: oclean all
 
