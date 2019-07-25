@@ -1,3 +1,6 @@
 [submodule "0x18-stacks_queues_lifo_fifo/monty"]
 	path = 0x18-stacks_queues_lifo_fifo/monty
 	url = https://github.com/ledbagholberton/monty.git
+[submodule "0x1D-binary_trees"]
+	path = 0x1D-binary_trees
+	url = https://github.com/HeimerR/0x1D-binary_trees.git
