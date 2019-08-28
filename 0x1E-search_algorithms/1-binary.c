@@ -14,35 +14,28 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t med_size, a, b;
-	int pos;
 
-	a = 0;
-	printf("Searching in array: ");
-	while (a < size - 1)
+	if ((int)size >= 1)
 	{
-		printf("%d, ", array[a]);
-		a++;
+		printf("Searching in array: ");
+		for (a = 0; a < size - 1; a++)
+			printf("%d, ", array[a]);
+		printf("%d\n", array[a]);
+		med_size = 1 + (size - 1) / 2;
+		if (array[med_size] == value)
+			return ((int)med_size);
+		if (array[med_size] > value)
+		{
+			size = med_size;
+			return (binary_search(array, size, value));
+		}
+		else
+		{
+			size = med_size;
+			for (b = 0;  b < med_size; b++)
+				array++;
+			return (binary_search(array, size, value) + med_size);
+		}
 	}
-	printf("%d \n", array[a]);
-	if ((size % 2) == 0)
-		med_size = (size / 2);
-	else
-		med_size = (size - 1) / 2;
-	if (array[med_size] == value)
-		return((int)med_size);
-	if (med_size == 1)
-		return((int)med_size - 1);
-	else if (array[med_size] > value)
-	{
-		size = med_size;
-		pos = binary_search(array, size, value);
-	}
-	else
-	{
-		size = med_size;
-		for (b = 0;  b < med_size; b++)
-			array++;
-		pos = binary_search(array, size, value) + med_size;
-	}
-	return(pos);
+	return (-1);
 }
