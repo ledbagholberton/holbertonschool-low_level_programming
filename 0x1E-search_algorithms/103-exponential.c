@@ -13,7 +13,7 @@
 
 int exponential_search(int *array, size_t size, int value)
 {
-	int b, prev = 1;
+	int b, prev = 1, next;
 
 	if (array  == NULL)
 		return (-1);
@@ -22,12 +22,18 @@ int exponential_search(int *array, size_t size, int value)
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		prev *= 2;
 	}
+	next = prev;
 	prev = prev / 2;
+	if (next > (int)size)
+		size = size - prev - 1;
+	else
+		size = (prev * 2);
+	printf("Value found between indexes [%d] and [%d]\n", prev, (int)size);
 	for (b = 0;  (int)b < prev; b++)
 		array++;
-	if (prev * 2 < (int)size)
-		size = prev * 2;
+	if (prev > (int)size)
+		size = size - prev - 1;
 	else
-		size = size - prev;
-	return (binary_search(array, size, value) + prev);
+		size = prev - prev/2 - 1;
+	return (binary_search(array, size, value));
 }
