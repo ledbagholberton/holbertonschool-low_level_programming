@@ -14,6 +14,7 @@
 int binary_search(int *array, size_t size, int value)
 {
 	size_t med_size, a, b;
+	int pos;
 
 	if (array == NULL)
 		return (-1);
@@ -36,10 +37,16 @@ int binary_search(int *array, size_t size, int value)
 			size = size - med_size;
 			for (b = 0;  b < (med_size); b++)
 				array++;
-			return (binary_search(array, size, value) + med_size);
+			pos = binary_search(array, size, value);
+			if (pos == -1)
+				return (-1);
+			else
+				return (pos + med_size);
 		}
 	}
 	if (array[0] ==  value)
 		return(0);
+	if (array[size] == value)
+		return(size);
 	return (-1);
 }
