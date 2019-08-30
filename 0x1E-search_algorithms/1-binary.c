@@ -13,12 +13,12 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t med_size, a, b;
+	size_t med_size, a;
 	int pos;
 
 	if (array == NULL)
 		return (-1);
-	if (size > 1)
+	if (size >= 1)
 	{
 		printf("Searching in array: ");
 		for (a = 0; a < size - 1; a++)
@@ -35,8 +35,7 @@ int binary_search(int *array, size_t size, int value)
 		else
 		{
 			size = size - med_size;
-			for (b = 0;  b < (med_size); b++)
-				array++;
+			array = array + med_size;
 			pos = binary_search(array, size, value);
 			if (pos == -1)
 				return (-1);
