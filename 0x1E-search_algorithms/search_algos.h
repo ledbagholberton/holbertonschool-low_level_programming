@@ -30,11 +30,4 @@ int interpolation_search(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value);
 int advanced_binary(int *array, size_t size, int value);
 
-
-
-/*void print_skiplist(const skiplist_t *listint_t);
-void free_skiplist(skiplist_t *listint_t);
-void init_express(skiplist_t *listint_t, size_t size);
-skiplist_t *create_skiplist(int *array, size_t size);*/
-
 #endif
