@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *binary_search - search binary
+ *advanced_binary - search binary advanced
  *
  *@array: numbers array where is located
  *@size: size of array
@@ -11,13 +11,13 @@
  *Return: location of value in the array
  */
 
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	size_t med_size, a, b;
 
 	if (array == NULL)
 		return (-1);
-	if (size > 1)
+	if (size > 0)
 	{
 		printf("Searching in array: ");
 		for (a = 0; a < size - 1; a++)
@@ -25,21 +25,21 @@ int binary_search(int *array, size_t size, int value)
 		printf("%d\n", array[a]);
 		med_size = 1 + (size - 1) / 2;
 		if (array[med_size] == value)
+//			while ((array[med_size] == array[med_size - 1]))
+//				med_size = med_size - 1;
 			return ((int)med_size);
 		if (array[med_size] > value)
 		{
 			size = med_size;
-			return (binary_search(array, size, value));
+			return (advanced_binary(array, size, value));
 		}
 		else
 		{
-			size = size - med_size;
-			for (b = 0;  b < (med_size); b++)
+			size = med_size;
+			for (b = 0;  b < med_size; b++)
 				array++;
-			return (binary_search(array, size, value) + med_size);
+			return (advanced_binary(array, size, value) + med_size);
 		}
 	}
-	if (array[0] ==  value)
-		return(0);
 	return (-1);
 }
